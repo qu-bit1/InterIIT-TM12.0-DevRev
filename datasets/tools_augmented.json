@@ -1,0 +1,1020 @@
+[
+    {
+        "tool": "artifacts.locate",
+        "description": "Gets the download URL for the artifact.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the artifact to get the URL for.",
+                "argument_type": "string",
+                "example": "ARTIFACT-12345"
+            },
+            {
+                "argument_name": "version",
+                "argument_description": "The version of the artifact that needs to be fetched.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "artifacts.prepare",
+        "description": "Creates an artifact and generates an upload URL for its data.\n",
+        "arguments": [
+            {
+                "argument_name": "file_name",
+                "argument_description": "The name of the file that's being uploaded.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "auth-tokens.create",
+        "description": "Creates a JWT corresponding to the requested token type for the\nauthenticated user.\n",
+        "arguments": [
+            {
+                "argument_name": "aud",
+                "argument_description": "The expected audience values with respect to the token.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "client_id",
+                "argument_description": "An identifier that represents the application which is requesting\nthe token. If no client_id is present in the request to generate an\napplication access token (AAT), DevRev will generate a client_id.\nThis client_id is only associated with an AAT.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "expires_in",
+                "argument_description": "The expected validity lifetime of the token in number of days.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "scope",
+                "argument_description": "The requested set of scopes associated with the issued token. A\nspace-delimited list of values in which the order of values does\nnot matter.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "subject_token",
+                "argument_description": "Represents the entity that requests the token. Not required when\nrequesting an application access token (AAT).\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "token_hint",
+                "argument_description": "A hint that identifies the token.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "auth-tokens.delete",
+        "description": "Revokes the token that matches the given token ID issued under the\ngiven Dev organization.\n",
+        "arguments": [
+            {
+                "argument_name": "token_id",
+                "argument_description": "The unique identifier for the token under a given Dev organization.\nIf no token ID is provided, then the token ID will be set from the\nJTI claim of the token in the authorization header.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "auth-tokens.get",
+        "description": "Gets the token metadata corresponding to the given token ID under the\ngiven Dev organization.\n",
+        "arguments": [
+            {
+                "argument_name": "token_id",
+                "argument_description": "The unique identifier of the token under a given Dev organization.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "auth-tokens.list",
+        "description": "Gets the token metadata for all the tokens corresponding to the given\ntoken type issued for a given subject.\n",
+        "arguments": [
+            {
+                "argument_name": "client_id",
+                "argument_description": "An identifier that represents the application, which requested the\ntoken. Only relevant for application access tokens.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "subject",
+                "argument_description": "The subject associated with the token. In the absence of this\nparameter, the ID of the authenticated entity is treated as the\nsubject.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "auth-tokens.self.delete",
+        "description": "Revokes all the tokens that matches the given token type created by the\nauthenticated user.\n",
+        "arguments": []
+    },
+    {
+        "tool": "auth-tokens.update",
+        "description": "Updates token metadata of a token issued under a given Dev\norganization.\n",
+        "arguments": [
+            {
+                "argument_name": "token_hint",
+                "argument_description": "A hint that identifies the token.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "token_id",
+                "argument_description": "The unique identifier of the token under a given Dev organization.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "dev-orgs.auth-connections.create",
+        "description": "Creates a new enterprise authentication connection for a Dev\norganization. This authentication connection will not be enabled by\ndefault for the organization and the user will need to explicitly\nenable this. Keep in mind that at a time, only one authentication\nconnection can be enabled for a Dev organization. At present, only 5\nenterprise connections can be created by an organization.\n",
+        "arguments": [
+            {
+                "argument_name": "display_name",
+                "argument_description": "Display name of the authentication connection. This name will be\nvisible to all the users when they sign in to this Dev\norganization. For example, if the display_name is 'abclogin', then\nit would appear on the login button as 'Log in to abclogin'.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "dev-orgs.auth-connections.delete",
+        "description": "Deletes an authentication connection. Only enterprise connections which\nare explicitly set up for a Dev organization can be deleted. Default\nconnections can not be deleted using this method.\n",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection to be deleted.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "dev-orgs.auth-connections.get",
+        "description": "Retrieves the details for an authentication connection.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    null,
+    {
+        "tool": "dev-orgs.auth-connections.toggle",
+        "description": "Enable or disable an authentication connection for a Dev organization.\nCurrently, only 1 authentication connection can be enabled at a time.\nWhen a new authentication connection is enabled, the connection which\nis currently enabled for the Dev organization is automatically\ndisabled.\n",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection to be toggled.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "dev-orgs.auth-connections.update",
+        "description": "Updates an authentication connection.",
+        "arguments": [
+            {
+                "argument_name": "display_name",
+                "argument_description": "New display name of the authentication connection. This name will\nbe visible to all the users when they sign in to this Dev\norganization. For example, if the display_name is 'abclogin', then\nit would appear on the login button as 'Log in to abclogin'.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection which is to be updated.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "dev-users.get",
+        "description": "Gets the requested user's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "User ID of the requested Dev user.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "dev-users.list",
+        "description": "Lists users within your organization.",
+        "arguments": [
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "email",
+                "argument_description": "Filters Dev users based on email addresses.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of Dev users to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "sort_by",
+                "argument_description": "Fields to sort the Dev users by and the direction to sort them.\n",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "state",
+                "argument_description": "Filters Dev users based on state.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    null,
+    {
+        "tool": "parts.create",
+        "description": "Creates new [part]().",
+        "arguments": [
+            {
+                "argument_name": "artifacts",
+                "argument_description": "The IDs of the artifacts.",
+                "argument_type": "array",
+                "example": [
+                    "ARTIFACT-12345"
+                ]
+            },
+            {
+                "argument_name": "description",
+                "argument_description": "Description of the part.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "Name of the part.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "The users that own the part.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            }
+        ]
+    },
+    {
+        "tool": "parts.delete",
+        "description": "Deletes a [part]().",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the part to delete.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            }
+        ]
+    },
+    {
+        "tool": "parts.get",
+        "description": "Gets a [part's]() information.\n",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the part to retrieve.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            }
+        ]
+    },
+    {
+        "tool": "parts.list",
+        "description": "Lists a collection of [parts]().\n",
+        "arguments": [
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for parts created by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of parts to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "Filters for parts of the provided name(s).",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for parts owned by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for parts of the provided type(s).",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "parts.update",
+        "description": "Updates a [part's]() information.\n",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "The updated description of the part.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the part to update.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "The updated name of the part.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "rev-orgs.create",
+        "description": "Creates a Rev organization in the authenticated user's Dev\norganization.\n",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "Description of the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "display_name",
+                "argument_description": "Name of the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "domain",
+                "argument_description": "Company's domain name. Example - 'devrev.ai'.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "external_ref",
+                "argument_description": "External ref is a custom unique identifier which is a reference to\nan unique id for this organization's data in some system of\nrecords.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "tier",
+                "argument_description": "The tier of the RevOrg.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "rev-orgs.delete",
+        "description": "Deletes the Rev organization.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of Rev organization to delete.",
+                "argument_type": "string",
+                "example": "REV-AbCdEfGh"
+            }
+        ]
+    },
+    {
+        "tool": "rev-orgs.get",
+        "description": "Retrieves the Rev organization's information.",
+        "arguments": [
+            {
+                "argument_name": "account",
+                "argument_description": "The ID of account for which default Rev organization is to be\nfetched.\n",
+                "argument_type": "string",
+                "example": "ACC-12345"
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the required Rev organization.",
+                "argument_type": "string",
+                "example": "REV-AbCdEfGh"
+            }
+        ]
+    },
+    {
+        "tool": "rev-orgs.list",
+        "description": "Gets the list of Rev organizations' information belonging to the\nauthenticated user's Dev Organization which the user is also authorized\nto access.\n",
+        "arguments": [
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters by creator.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "external_ref",
+                "argument_description": "List of external refs to filter Rev organizations for.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of Rev organizations to be retrieved per page.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "sort_by",
+                "argument_description": "Fields to sort the Rev organizations by and the direction to sort\nthem.\n",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "rev-orgs.update",
+        "description": "Updates the Rev organization's information.",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "Description of the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "display_name",
+                "argument_description": "Customer chosen name for the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "domain",
+                "argument_description": "Company's domain name. Example - 'devrev.ai'.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "external_ref",
+                "argument_description": "External ref is a custom unique identifier which is a reference to\nan unique id for this organization's data in some system of\nrecords.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of Rev organization to update.",
+                "argument_type": "string",
+                "example": "REV-AbCdEfGh"
+            },
+            {
+                "argument_name": "tier",
+                "argument_description": "The tier of the RevOrg.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "tags.create",
+        "description": "Creates a new tag, which is used to create associations between objects\nand a logical concept denoted by the tag's name.\n",
+        "arguments": [
+            {
+                "argument_name": "allowed_values",
+                "argument_description": "The allowed values for the tag, or empty if no values are\npermitted.\n",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "description",
+                "argument_description": "The description for the tag.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "The name for the tag, which must be unique across all tags.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "tags.delete",
+        "description": "Deletes a tag.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the tag to delete.",
+                "argument_type": "string",
+                "example": "TAG-12345"
+            }
+        ]
+    },
+    {
+        "tool": "tags.get",
+        "description": "Gets a tag's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The requested tag's ID.",
+                "argument_type": "string",
+                "example": "TAG-12345"
+            }
+        ]
+    },
+    {
+        "tool": "tags.list",
+        "description": "Lists the available tags.",
+        "arguments": [
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of tags to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "Filters for tags with the provided names.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "sort_by",
+                "argument_description": "Fields to sort tags by and the direction to sort them.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "tags.update",
+        "description": "Updates a tag's information.",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "The updated description of the tag.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the tag to update.",
+                "argument_type": "string",
+                "example": "TAG-12345"
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "The updated name of the tag. The name must be unique across all\ntags.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "timeline-entries.create",
+        "description": "Creates a new entry on an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "expires_at",
+                "argument_description": "If set, then the entry is ephemeral and will be deleted after the\nprovided time. The minimum value should be at least a minute more\nthan the current timestamp.\n",
+                "argument_type": "string",
+                "example": "2023-01-01T12:00:00.000Z"
+            },
+            {
+                "argument_name": "object",
+                "argument_description": "The ID of the object to create the timeline entry for.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "private_to",
+                "argument_description": "If the visibility of the entry is private, this specifies the users\nthat the entry is private to. Note the creator is always implicitly\nincluded in this list.\n",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            }
+        ]
+    },
+    {
+        "tool": "timeline-entries.delete",
+        "description": "Deletes an entry from an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the timeline entry to delete.",
+                "argument_type": "string",
+                "example": "don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>"
+            }
+        ]
+    },
+    {
+        "tool": "timeline-entries.get",
+        "description": "Gets an entry on an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the timeline entry to get.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "timeline-entries.list",
+        "description": "Lists the timeline entries for an object.",
+        "arguments": [
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of entries to return. If not set, then this\ndefaults to `50`.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "object",
+                "argument_description": "The ID of the object to list timeline entries for.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "visibility",
+                "argument_description": "The visibility of the timeline entries to filter for. Note this is\na strict filter, such that only entries with the exact visibilities\nspecified will be returned.\n",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "timeline-entries.update",
+        "description": "Updates an entry on an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the timeline entry to update.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "webhooks.create",
+        "description": "Creates a new webhook target.",
+        "arguments": [
+            {
+                "argument_name": "event_types",
+                "argument_description": "The event types that the webhook endpoint will receive.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "secret",
+                "argument_description": "The secret to use when verifying webhook events. If provided, the\nsecret must be between 8 and 32 bytes (inclusive). If not set, a\nsecret will be automatically generated and provided in the\nresponse.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "url",
+                "argument_description": "The URL of the webhook endpoint.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "webhooks.delete",
+        "description": "Deletes the requested webhook.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID for the webhook.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "webhooks.get",
+        "description": "Gets the requested webhook's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID for the webhook.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    null,
+    {
+        "tool": "webhooks.update",
+        "description": "Updates the requested webhook.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID for the webhook.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "secret",
+                "argument_description": "If provided, updates the secret that's used when verifying webhook\nevents, which must be between 8 and 32 bytes (inclusive). Otherwise\nif empty, then a new secret is generated. If the webhook is active,\nthen its status will transition to the 'unverified' state and it\nwon't receive any object events until successfully verified.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "url",
+                "argument_description": "The webhook's updated URL. If the webhook is active, then the\nwebhook's status will transition to the 'unverified' state and it\nwon't receive any object events until successfully verified.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "works.create",
+        "description": "Creates new work ([issue](),\n[ticket]()) item.\n[task]() and opportunity work types\nare supported in the beta version.\n",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "The [part]() that the work\napplies to. Specifying a part is required when creating tickets and\nissues.\n",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "artifacts",
+                "argument_description": "The IDs of the artifacts to associate with the work item.\n",
+                "argument_type": "array",
+                "example": [
+                    "ARTIFACT-12345"
+                ]
+            },
+            {
+                "argument_name": "body",
+                "argument_description": "Body of the work object.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "The users that own the work.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "reported_by",
+                "argument_description": "The users that reported the work.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "tags",
+                "argument_description": "Tags associated with the work item.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "target_close_date",
+                "argument_description": "Timestamp for when the work is expected to be complete.",
+                "argument_type": "string",
+                "example": "2023-01-01T12:00:00.000Z"
+            },
+            {
+                "argument_name": "title",
+                "argument_description": "Title of the work object.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "works.delete",
+        "description": "Deletes a work item.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The work's ID.",
+                "argument_type": "string",
+                "example": "ISS-12345"
+            }
+        ]
+    },
+    {
+        "tool": "works.export",
+        "description": "Exports a collection of work items.",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "Filters for work belonging to any of the provided parts.",
+                "argument_type": "array",
+                "example": [
+                    "PROD-12345"
+                ]
+            },
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for work created by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "first",
+                "argument_description": "The number of work items to return. The default is '50', the\nmaximum is '5000'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for work owned by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "tags",
+                "argument_description": "Filters for work with any of the provided tags.",
+                "argument_type": "array",
+                "example": [
+                    "TAG-12345"
+                ]
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for work of the provided types.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "works.get",
+        "description": "Gets a work item's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The work's ID.",
+                "argument_type": "string",
+                "example": "ISS-12345"
+            }
+        ]
+    },
+    {
+        "tool": "works.list",
+        "description": "Lists a collection of work items.",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "Filters for work belonging to any of the provided parts.",
+                "argument_type": "array",
+                "example": [
+                    "PROD-12345"
+                ]
+            },
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for work created by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of works to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for work owned by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "tags",
+                "argument_description": "Filters for work with any of the provided tags.",
+                "argument_type": "array",
+                "example": [
+                    "TAG-12345"
+                ]
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for work of the provided types.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool": "works.update",
+        "description": "Updates a work item's information.",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "Updates the part that the work item applies to.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "body",
+                "argument_description": "Updated body of the work object, or unchanged if not provided.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The work's ID.",
+                "argument_type": "string",
+                "example": "ISS-12345"
+            },
+            {
+                "argument_name": "target_close_date",
+                "argument_description": "Updates the timestamp for when the work is expected to be complete.\n",
+                "argument_type": "string",
+                "example": "2023-01-01T12:00:00.000Z"
+            },
+            {
+                "argument_name": "title",
+                "argument_description": "Updated title of the work object, or unchanged if not provided.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    }
+]

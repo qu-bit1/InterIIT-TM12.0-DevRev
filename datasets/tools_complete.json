@@ -1,0 +1,4362 @@
+[
+    {
+      "tool_name": "announcement_banner",
+      "description": "This resource represents an announcement banner. Use it to retrieve and update banner configuration.",
+      "arguments": [
+        {
+          "argument_name": "announcementBanner",
+          "argument_description": "Returns the current announcement banner configuration",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "announcementBanner",
+          "argument_description": "Updates the announcement banner configuration",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "application_roles",
+      "description": "This resource represents application roles. Use it to get details of an application role or all application roles.",
+      "arguments": [
+        {
+          "argument_name": "applicationrole",
+          "argument_description": "Returns all application roles",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "applicationrole/:key",
+          "argument_description": "Returns an application role",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "audit_records",
+      "description": "This resource represents audits that record activities undertaken in Jira. Use it to get a list of audit records.",
+      "arguments": [
+        {
+          "argument_name": "auditing/record",
+          "argument_description": "Returns a list of audit records",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "avatars",
+      "description": "This resource represents system and custom avatars. Use it to obtain the details of system or custom avatars, add and remove avatars from a project or issue type, and obtain avatar images.",
+      "arguments": [
+        {
+          "argument_name": "avatar/:type/system",
+          "argument_description": "Returns a list of system avatar details by owner type, where the owner types are issue type, project, or user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "universal_avatar/type/:type/owner/:entityId",
+          "argument_description": "Returns the system and custom avatars for a project or issue type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "universal_avatar/type/:type/owner/:entityId",
+          "argument_description": "Loads a custom avatar for a project or issue type",
+          "argument_type": "*/*"
+        },
+        {
+          "argument_name": "universal_avatar/type/:type/owner/:owningObjectId/avatar/:id",
+          "argument_description": "Deletes an avatar from a project or issue type",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "universal_avatar/view/type/:type",
+          "argument_description": "Returns the default project or issue type avatar image",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "universal_avatar/view/type/:type/avatar/:id",
+          "argument_description": "Returns a project or issue type avatar image by ID",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "universal_avatar/view/type/:type/owner/:entityId",
+          "argument_description": "Returns the avatar image for a project or issue type",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "dashboards",
+      "description": "This resource represents dashboards. Use it to obtain the details of dashboards as well as get, create, update, or remove item properties and gadgets from dashboards.",
+      "arguments": [
+        {
+          "argument_name": "dashboard",
+          "argument_description": "Returns a list of dashboards owned by or shared with the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard",
+          "argument_description": "Creates a dashboard",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/bulk/edit",
+          "argument_description": "Bulk edit dashboards",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/gadgets",
+          "argument_description": "Gets a list of all available gadgets that can be added to all dashboards",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/search",
+          "argument_description": "Returns a [paginated](#pagination) list of dashboards",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/gadget",
+          "argument_description": "Returns a list of dashboard gadgets on a dashboard",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/gadget",
+          "argument_description": "Adds a gadget to a dashboard",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/gadget/:gadgetId",
+          "argument_description": "Changes the title, position, and color of the gadget on a dashboard",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/gadget/:gadgetId",
+          "argument_description": "Removes a dashboard gadget from a dashboard",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/items/:itemId/properties",
+          "argument_description": "Returns the keys of all properties for a dashboard item",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/items/:itemId/properties/:propertyKey",
+          "argument_description": "Returns the key and value of a dashboard item property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/items/:itemId/properties/:propertyKey",
+          "argument_description": "Sets the value of a dashboard item property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:dashboardId/items/:itemId/properties/:propertyKey",
+          "argument_description": "Deletes a dashboard item property",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "dashboard/:id",
+          "argument_description": "Returns a dashboard",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:id",
+          "argument_description": "Updates a dashboard, replacing all the dashboard details with those provided",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "dashboard/:id",
+          "argument_description": "Deletes a dashboard",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "dashboard/:id/copy",
+          "argument_description": "Copies a dashboard",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "filters",
+      "description": "This resource represents [filters]. Use it to get, create, update, or delete filters.",
+      "arguments": [
+        {
+          "argument_name": "filter",
+          "argument_description": "Creates a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/favourite",
+          "argument_description": "Returns the visible favorite filters of the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/my",
+          "argument_description": "Returns the filters owned by the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/search",
+          "argument_description": "Returns a [paginated](#pagination) list of filters",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id",
+          "argument_description": "Returns a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id",
+          "argument_description": "Updates a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id",
+          "argument_description": "Delete a filter",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "filter/:id/columns",
+          "argument_description": "Returns the columns configured for a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/columns",
+          "argument_description": "Sets the columns for a filter",
+          "argument_type": "*/*"
+        },
+        {
+          "argument_name": "filter/:id/columns",
+          "argument_description": "Reset the user's column configuration for the filter to the default",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "filter/:id/favourite",
+          "argument_description": "Add a filter as a favorite for the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/favourite",
+          "argument_description": "Removes a filter as a favorite for the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/owner",
+          "argument_description": "Changes the owner of the filter",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "filter_sharing",
+      "description": "This resource represents options for sharing [filters]. Use it to get share scopes as well as add and remove share scopes from filters.",
+      "arguments": [
+        {
+          "argument_name": "filter/defaultShareScope",
+          "argument_description": "Returns the default sharing settings for new filters and dashboards for a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/defaultShareScope",
+          "argument_description": "Sets the default sharing for new filters and dashboards for a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/permission",
+          "argument_description": "Returns the share permissions for a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/permission",
+          "argument_description": "Add a share permissions to a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/permission/:permissionId",
+          "argument_description": "Returns a share permission for a filter",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "filter/:id/permission/:permissionId",
+          "argument_description": "Deletes a share permission from a filter",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "group_and_user_picker",
+      "description": "This resource represents a list of users and a list of groups. Use it to obtain the details to populate user and group picker suggestions list.",
+      "arguments": [
+        {
+          "argument_name": "groupuserpicker",
+          "argument_description": "Returns a list of users and groups matching a string",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "groups",
+      "description": "This resource represents groups of users. Use it to get, create, find, and delete groups as well as add and remove users from groups.",
+      "arguments": [
+        {
+          "argument_name": "group",
+          "argument_description": "This operation is deprecated, use [`group/member`](#api-rest-api-3-group-member-get)",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "group",
+          "argument_description": "Creates a group",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "group",
+          "argument_description": "Deletes a group",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "group/bulk",
+          "argument_description": "Returns a [paginated](#pagination) list of groups",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "group/member",
+          "argument_description": "Returns a [paginated](#pagination) list of all users in a group",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "group/user",
+          "argument_description": "Adds a user to a group",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "group/user",
+          "argument_description": "Removes a user from a group",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "groups/picker",
+          "argument_description": "Returns a list of groups whose names contain a query string",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issues",
+      "description": "This resource represents Jira issues. Use it to:create or edit issues, individually or in bulk,retrieve metadata about the options for creating or editing issues,delete an issue,assign a user to an issue,get issue changelogs,send notifications about an issue,get details of the transitions available for an issue.transition an issue.Archive issues.Unarchive issues.Export archived issues.",
+      "arguments": [
+        {
+          "argument_name": "events",
+          "argument_description": "Returns all issue events",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue",
+          "argument_description": "Creates an issue or, where the option to create subtasks is enabled in Jira, a subtask",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/archive",
+          "argument_description": "Enables admins to archive up to 1000 issues in a single request using issue ID/key, returning details of the issue(s) archived in the process and the errors encountered, if any",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/archive",
+          "argument_description": "Enables admins to archive up to 100,000 issues in a single request using JQL, returning the URL to check the status of the submitted request",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/bulk",
+          "argument_description": "Creates upto **50** issues and, where the option to create subtasks is enabled in Jira, subtasks",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/createmeta",
+          "argument_description": "Returns details of projects, issue types within projects, and, when requested, the create screen fields for each issue type for the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/createmeta/:projectIdOrKey/issuetypes",
+          "argument_description": "Returns a page of issue type metadata for a specified project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/createmeta/:projectIdOrKey/issuetypes/:issueTypeId",
+          "argument_description": "Returns a page of field metadata for a specified project and issuetype id",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/unarchive",
+          "argument_description": "Enables admins to unarchive up to 1000 issues in a single request using issue ID/key, returning details of the issue(s) unarchived in the process and the errors encountered, if any",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey",
+          "argument_description": "Returns the details for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey",
+          "argument_description": "Edits an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey",
+          "argument_description": "Deletes an issue",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/assignee",
+          "argument_description": "Assigns an issue to a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/changelog",
+          "argument_description": "Returns a [paginated](#pagination) list of all changelogs for an issue sorted by date, starting from the oldest",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/changelog/list",
+          "argument_description": "Returns changelogs for an issue specified by a list of changelog IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/editmeta",
+          "argument_description": "Returns the edit screen fields for an issue that are visible to and editable by the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/notify",
+          "argument_description": "Creates an email notification for an issue and adds it to the mail queue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/transitions",
+          "argument_description": "Returns either all transitions or a transition that can be performed by the user on an issue, based on the issue's status",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/transitions",
+          "argument_description": "Performs an issue transition and, if the transition has a screen, updates the fields from the transition screen",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issues/archive/export",
+          "argument_description": "Enables admins to retrieve details of all archived issues",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "ui_modifications_(apps)",
+      "description": "UI modifications is a feature available for **Forge apps only**. It enables Forge apps to control how selected Jira fields behave on the following views: global issue create, issue view. For example: hide specific fields, set them as required, etc.",
+      "arguments": [
+        {
+          "argument_name": "uiModifications",
+          "argument_description": "Gets UI modifications",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "uiModifications",
+          "argument_description": "Creates a UI modification",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "uiModifications/:uiModificationId",
+          "argument_description": "Updates a UI modification",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "uiModifications/:uiModificationId",
+          "argument_description": "Deletes a UI modification",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_attachments",
+      "description": "This resource represents issue attachments and the attachment settings for Jira. Use it to get the metadata for an attachment, delete an attachment, and view the metadata for the contents of an attachment. Also, use it to get the attachment settings for Jira.",
+      "arguments": [
+        {
+          "argument_name": "attachment/content/:id",
+          "argument_description": "Returns the contents of an attachment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "attachment/meta",
+          "argument_description": "Returns the attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "attachment/thumbnail/:id",
+          "argument_description": "Returns the thumbnail of an attachment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "attachment/:id",
+          "argument_description": "Returns the metadata for an attachment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "attachment/:id",
+          "argument_description": "Deletes an attachment from an issue",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "attachment/:id/expand/human",
+          "argument_description": "Returns the metadata for the contents of an attachment, if it is an archive, and metadata for the attachment itself",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "attachment/:id/expand/raw",
+          "argument_description": "Returns the metadata for the contents of an attachment, if it is an archive",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/attachments",
+          "argument_description": "Adds one or more attachments to an issue",
+          "argument_type": "multipart/form-data"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_comments",
+      "description": "This resource represents issue comments. Use it to:\n\n *  get, create, update, and delete a comment from an issue.\n *  get all comments from issue.\n *  get a list of comments by comment ID.",
+      "arguments": [
+        {
+          "argument_name": "comment/list",
+          "argument_description": "Returns a [paginated](#pagination) list of comments specified by a list of comment IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/comment",
+          "argument_description": "Returns all comments for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/comment",
+          "argument_description": "Adds a comment to an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/comment/:id",
+          "argument_description": "Returns a comment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/comment/:id",
+          "argument_description": "Updates a comment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/comment/:id",
+          "argument_description": "Deletes a comment",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_comment_properties",
+      "description": "This resource represents [issue comment](#api-group-Issue-comments) properties, which provides for storing custom data against an issue comment. Use is to get, set, and delete issue comment properties as well as obtain the keys of all properties on a comment. Comment properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).",
+      "arguments": [
+        {
+          "argument_name": "comment/:commentId/properties",
+          "argument_description": "Returns the keys of all the properties of a comment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "comment/:commentId/properties/:propertyKey",
+          "argument_description": "Returns the value of a comment property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "comment/:commentId/properties/:propertyKey",
+          "argument_description": "Creates or updates the value of a property for a comment",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "comment/:commentId/properties/:propertyKey",
+          "argument_description": "Deletes a comment property",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_fields",
+      "description": "This resource represents issue fields, both system and custom fields. Use it to get fields, field configurations, and create custom fields.",
+      "arguments": [
+        {
+          "argument_name": "field",
+          "argument_description": "Returns system and custom issue fields according to the following rules:\n\n *  Fields that cannot be added to the issue navigator are always returned",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field",
+          "argument_description": "Creates a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/search",
+          "argument_description": "Returns a [paginated](#pagination) list of fields for Classic Jira projects",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/search/trashed",
+          "argument_description": "Returns a [paginated](#pagination) list of fields in the trash",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId",
+          "argument_description": "Updates a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/contexts",
+          "argument_description": "Returns a [paginated](#pagination) list of the contexts a field is used in",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:id",
+          "argument_description": "Deletes a custom field",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "field/:id/restore",
+          "argument_description": "Restores a custom field from trash",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:id/trash",
+          "argument_description": "Moves a custom field to trash",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_field_configurations",
+      "description": "This resource represents issue field configurations. Use it to get, set, and delete field configurations and field configuration schemes.",
+      "arguments": [
+        {
+          "argument_name": "fieldconfiguration",
+          "argument_description": "Returns a [paginated](#pagination) list of field configurations",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfiguration",
+          "argument_description": "Creates a field configuration",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfiguration/:id",
+          "argument_description": "Updates a field configuration",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfiguration/:id",
+          "argument_description": "Deletes a field configuration",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "fieldconfiguration/:id/fields",
+          "argument_description": "Returns a [paginated](#pagination) list of all fields for a configuration",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfiguration/:id/fields",
+          "argument_description": "Updates fields in a field configuration",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme",
+          "argument_description": "Returns a [paginated](#pagination) list of field configuration schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme",
+          "argument_description": "Creates a field configuration scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/mapping",
+          "argument_description": "Returns a [paginated](#pagination) list of field configuration issue type items",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/project",
+          "argument_description": "Returns a [paginated](#pagination) list of field configuration schemes and, for each scheme, a list of the projects that use it",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/project",
+          "argument_description": "Assigns a field configuration scheme to a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/:id",
+          "argument_description": "Updates a field configuration scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/:id",
+          "argument_description": "Deletes a field configuration scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/:id/mapping",
+          "argument_description": "Assigns issue types to field configurations on field configuration scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "fieldconfigurationscheme/:id/mapping/delete",
+          "argument_description": "Removes issue types from the field configuration scheme",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_custom_field_contexts",
+      "description": "This resource represents issue custom field contexts. Use it to:\n\n *  get, create, update, and delete custom field contexts.\n *  get context to issue types and projects mappings.\n *  get custom field contexts for projects and issue types.\n *  assign custom field contexts to projects.\n *  remove custom field contexts from projects.\n *  add issue types to custom field contexts.",
+      "arguments": [
+        {
+          "argument_name": "field/:fieldId/context",
+          "argument_description": "Returns a [paginated](#pagination) list of [ contexts](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context",
+          "argument_description": "Creates a custom field context",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/defaultValue",
+          "argument_description": "Returns a [paginated](#pagination) list of defaults for a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/defaultValue",
+          "argument_description": "Sets default for contexts of a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/issuetypemapping",
+          "argument_description": "Returns a [paginated](#pagination) list of context to issue type mappings for a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/mapping",
+          "argument_description": "Returns a [paginated](#pagination) list of project and issue type mappings and, for each mapping, the ID of a [custom field context](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/projectmapping",
+          "argument_description": "Returns a [paginated](#pagination) list of context to project mappings for a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId",
+          "argument_description": "Updates a [ custom field context](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId",
+          "argument_description": "Deletes a [ custom field context](https://confluence",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/issuetype",
+          "argument_description": "Adds issue types to a custom field context, appending the issue types to the issue types list",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/issuetype/remove",
+          "argument_description": "Removes issue types from a custom field context",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/project",
+          "argument_description": "Assigns a custom field context to projects",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/project/remove",
+          "argument_description": "Removes a custom field context from projects",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_custom_field_options",
+      "description": "This resource represents custom issue field select list options created in Jira or using the REST API. This resource supports the following field types:\n\n *  Checkboxes.\n *  Radio Buttons.\n *  Select List (single choice).\n *  Select List (multiple choices).\n *  Select List (cascading).\n\nSee [Issue custom field options (apps)](#api-group-Issue-custom-field-options--apps-) to manipulate custom issue field select list options created by a Connect app.\n\nUse it to retrieve, create, update, order, and delete custom field options.",
+      "arguments": [
+        {
+          "argument_name": "customFieldOption/:id",
+          "argument_description": "Returns a custom field option",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/option",
+          "argument_description": "Returns a [paginated](#pagination) list of all custom field option for a context",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/option",
+          "argument_description": "Updates the options of a custom field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/option",
+          "argument_description": "Creates options and, where the custom select field is of the type Select List (cascading), cascading options for a custom select field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/option/move",
+          "argument_description": "Changes the order of custom field options or cascading options in a context",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldId/context/:contextId/option/:optionId",
+          "argument_description": "Deletes a custom field option",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_custom_field_options_(apps)",
+      "description": "This resource represents custom issue field select list options created by a Connect app. See [Issue custom field options](#api-group-Issue-custom-field-options) to manipulate options created in Jira or using the REST API.\n\nA select list issue field is a type of [issue field](https://developer.atlassian.com/cloud/jira/platform/modules/issue-field/) that enables a user to select an option from a list. Use it to add, remove, and update the options of a select list issue field.",
+      "arguments": [
+        {
+          "argument_name": "field/:fieldKey/option",
+          "argument_description": "Returns a [paginated](#pagination) list of all the options of a select list issue field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldKey/option",
+          "argument_description": "Creates an option for a select list issue field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldKey/option/suggestions/edit",
+          "argument_description": "Returns a [paginated](#pagination) list of options for a select list issue field that can be viewed and selected by the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldKey/option/suggestions/search",
+          "argument_description": "Returns a [paginated](#pagination) list of options for a select list issue field that can be viewed by the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldKey/option/:optionId",
+          "argument_description": "Returns an option from a select list issue field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldKey/option/:optionId",
+          "argument_description": "Updates or creates an option for a select list issue field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "field/:fieldKey/option/:optionId",
+          "argument_description": "Deletes an option from a select list issue field",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "field/:fieldKey/option/:optionId/issue",
+          "argument_description": "Deselects an issue-field select-list option from all issues where it is selected",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_custom_field_values_(apps)",
+      "description": "This resource represents the values of custom fields added by [Forge apps](https://developer.atlassian.com/platform/forge/). Use it to update the value of a custom field on issues.",
+      "arguments": [
+        {
+          "argument_name": "app/field/value",
+          "argument_description": "Updates the value of one or more custom fields on one or more issues",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "app/field/:fieldIdOrKey/value",
+          "argument_description": "Updates the value of a custom field on one or more issues",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_custom_field_configuration_(apps)",
+      "description": "This resource represents configurations stored against a custom field context by a [Forge app](https://developer.atlassian.com/platform/forge/). Configurations are information used by the Forge app at runtime to determine how to handle or process the data in a custom field in a given context. Use this resource to set and read configurations.",
+      "arguments": [
+        {
+          "argument_name": "app/field/:fieldIdOrKey/context/configuration",
+          "argument_description": "Returns a [paginated](#pagination) list of configurations for a custom field created by a [Forge app](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "app/field/:fieldIdOrKey/context/configuration",
+          "argument_description": "Update the configuration for contexts of a custom field created by a [Forge app](https://developer",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_links",
+      "description": "This resource represents links between issues. Use it to get, create, and delete links between issues.\n\nTo use it, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.",
+      "arguments": [
+        {
+          "argument_name": "issueLink",
+          "argument_description": "Creates a link between two issues",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issueLink/:linkId",
+          "argument_description": "Returns an issue link",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issueLink/:linkId",
+          "argument_description": "Deletes an issue link",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_link_types",
+      "description": "This resource represents [issue link](#api-group-Issue-links) types. Use it to get, create, update, and delete link issue types as well as get lists of all link issue types.\n\nTo use it, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.",
+      "arguments": [
+        {
+          "argument_name": "issueLinkType",
+          "argument_description": "Returns a list of all issue link types",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issueLinkType",
+          "argument_description": "Creates an issue link type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issueLinkType/:issueLinkTypeId",
+          "argument_description": "Returns an issue link type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issueLinkType/:issueLinkTypeId",
+          "argument_description": "Updates an issue link type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issueLinkType/:issueLinkTypeId",
+          "argument_description": "Deletes an issue link type",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_navigator_settings",
+      "description": "This resource represents issue navigator settings. Use it to get and set issue navigator default columns.",
+      "arguments": [
+        {
+          "argument_name": "settings/columns",
+          "argument_description": "Returns the default issue navigator columns",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "settings/columns",
+          "argument_description": "Sets the default issue navigator columns",
+          "argument_type": "*/*"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_notification_schemes",
+      "description": "This resource represents notification schemes, lists of events and the recipients who will receive notifications for those events. Use it to get details of a notification scheme and a list of notification schemes.\n\n### About notification schemes ###\n\nA notification scheme is a list of events and recipients who will receive notifications for those events. The list is contained within the `notificationSchemeEvents` object and contains pairs of `events` and `notifications`:\n\n *  `event` Identifies the type of event. The events can be [Jira system events](https://support.atlassian.com/jira-cloud-administration/docs/configure-notification-schemes/) (see the *Events* section) or [custom events](https://support.atlassian.com/jira-cloud-administration/docs/add-a-custom-event/).\n *  `notifications` Identifies the [recipients](https://confluence.atlassian.com/x/8YdKLg#Creatinganotificationscheme-recipientsRecipients) of notifications for each event. Recipients can be any of the following types:\n    \n     *  `CurrentAssignee`\n     *  `Reporter`\n     *  `CurrentUser`\n     *  `ProjectLead`\n     *  `ComponentLead`\n     *  `User` (the `parameter` is the user key)\n     *  `Group` (the `parameter` is the group name)\n     *  `ProjectRole` (the `parameter` is the project role ID)\n     *  `EmailAddress` *(deprecated)*\n     *  `AllWatchers`\n     *  `UserCustomField` (the `parameter` is the ID of the custom field)\n     *  `GroupCustomField`(the `parameter` is the ID of the custom field)",
+      "arguments": [
+        {
+          "argument_name": "notificationscheme",
+          "argument_description": "Returns a [paginated](#pagination) list of [notification schemes](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "notificationscheme",
+          "argument_description": "Creates a notification scheme with notifications",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "notificationscheme/project",
+          "argument_description": "Returns a [paginated](#pagination) mapping of project that have notification scheme assigned",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "notificationscheme/:id",
+          "argument_description": "Returns a [notification scheme](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "notificationscheme/:id",
+          "argument_description": "Updates a notification scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "notificationscheme/:id/notification",
+          "argument_description": "Adds notifications to a notification scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "notificationscheme/:notificationSchemeId",
+          "argument_description": "Deletes a notification scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "notificationscheme/:notificationSchemeId/notification/:notificationId",
+          "argument_description": "Removes a notification from a notification scheme",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_priorities",
+      "description": "This resource represents issue priorities. Use it to get, create and update issue priorities and details for individual issue priorities.",
+      "arguments": [
+        {
+          "argument_name": "priority",
+          "argument_description": "Returns the list of all issue priorities",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority",
+          "argument_description": "Creates an issue priority",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority/default",
+          "argument_description": "Sets default issue priority",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority/move",
+          "argument_description": "Changes the order of issue priorities",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority/search",
+          "argument_description": "Returns a [paginated](#pagination) list of priorities",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority/:id",
+          "argument_description": "Returns an issue priority",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority/:id",
+          "argument_description": "Updates an issue priority",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "priority/:id",
+          "argument_description": "*Deprecated: please refer to the* [changelog](https://developer",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_properties",
+      "description": "This resource represents [issue](#api-group-Issues) properties, which provides for storing custom data against an issue. Use it to get, set, and delete issue properties as well as obtain details of all properties on an issue. Operations to bulk update and delete issue properties are also provided. Issue properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).",
+      "arguments": [
+        {
+          "argument_name": "issue/properties",
+          "argument_description": "Sets or updates a list of entity property values on issues",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/properties/multi",
+          "argument_description": "Sets or updates entity property values on issues",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/properties/:propertyKey",
+          "argument_description": "Sets a property value on multiple issues",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/properties/:propertyKey",
+          "argument_description": "Deletes a property value from multiple issues",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/properties",
+          "argument_description": "Returns the URLs and keys of an issue's properties",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/properties/:propertyKey",
+          "argument_description": "Returns the key and value of an issue's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/properties/:propertyKey",
+          "argument_description": "Sets the value of an issue's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/properties/:propertyKey",
+          "argument_description": "Deletes an issue's property",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_remote_links",
+      "description": "This resource represents remote issue links, a way of linking Jira to information in other systems. Use it to get, create, update, and delete remote issue links either by ID or global ID. The global ID provides a way of accessing remote issue links using information about the item's remote system host and remote system identifier.",
+      "arguments": [
+        {
+          "argument_name": "issue/:issueIdOrKey/remotelink",
+          "argument_description": "Returns the remote issue links for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/remotelink",
+          "argument_description": "Creates or updates a remote issue link for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/remotelink",
+          "argument_description": "Deletes the remote issue link from the issue using the link's global ID",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/remotelink/:linkId",
+          "argument_description": "Returns a remote issue link for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/remotelink/:linkId",
+          "argument_description": "Updates a remote issue link for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/remotelink/:linkId",
+          "argument_description": "Deletes a remote issue link from an issue",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_resolutions",
+      "description": "This resource represents issue resolution values. Use it to obtain a list of all issue resolution values and the details of individual resolution values.",
+      "arguments": [
+        {
+          "argument_name": "resolution",
+          "argument_description": "Returns a list of all issue resolution values",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution",
+          "argument_description": "Creates an issue resolution",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution/default",
+          "argument_description": "Sets default issue resolution",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution/move",
+          "argument_description": "Changes the order of issue resolutions",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution/search",
+          "argument_description": "Returns a [paginated](#pagination) list of resolutions",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution/:id",
+          "argument_description": "Returns an issue resolution value",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution/:id",
+          "argument_description": "Updates an issue resolution",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "resolution/:id",
+          "argument_description": "Deletes an issue resolution",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_search",
+      "description": "This resource represents various ways to search for issues. Use it to search for issues with a JQL query and find issues to populate an issue picker.",
+      "arguments": [
+        {
+          "argument_name": "issue/picker",
+          "argument_description": "Returns lists of issues matching a query string",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/match",
+          "argument_description": "Checks whether one or more issues would be returned by one or more JQL queries",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "search",
+          "argument_description": "Searches for issues using [JQL](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "search",
+          "argument_description": "Searches for issues using [JQL](https://confluence",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_security_level",
+      "description": "This resource represents issue security levels. Use it to obtain the details of any issue security level. For more information about issue security levels, see [Configuring issue-level security](https://confluence.atlassian.com/x/J4lKLg).",
+      "arguments": [
+        {
+          "argument_name": "issuesecurityschemes/:issueSecuritySchemeId/members",
+          "argument_description": "Returns issue security level members",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "securitylevel/:id",
+          "argument_description": "Returns details of an issue security level",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_security_schemes",
+      "description": "This resource represents issue security schemes. Use it to get an issue security scheme or a list of issue security schemes.\n\nIssue security schemes control which users or groups of users can view an issue. When an issue security scheme is associated with a project, its security levels can be applied to issues in that project. Sub-tasks also inherit the security level of their parent issue.",
+      "arguments": [
+        {
+          "argument_name": "issuesecurityschemes",
+          "argument_description": "Returns all [issue security schemes](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes",
+          "argument_description": "Creates a security scheme with security scheme levels and levels' members",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/level",
+          "argument_description": "Returns a [paginated](#pagination) list of issue security levels",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/level/default",
+          "argument_description": "Sets default issue security levels for schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/level/member",
+          "argument_description": "Returns a [paginated](#pagination) list of issue security level members",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/project",
+          "argument_description": "Returns a [paginated](#pagination) mapping of projects that are using security schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/project",
+          "argument_description": "Associates an issue security scheme with a project and remaps security levels of issues to the new levels, if provided",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/search",
+          "argument_description": "Returns a [paginated](#pagination) list of issue security schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/:id",
+          "argument_description": "Returns an issue security scheme along with its security levels",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/:id",
+          "argument_description": "Updates the issue security scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/:schemeId",
+          "argument_description": "Deletes an issue security scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issuesecurityschemes/:schemeId/level",
+          "argument_description": "Adds levels and levels' members to the issue security scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/:schemeId/level/:levelId",
+          "argument_description": "Updates the issue security level",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/:schemeId/level/:levelId",
+          "argument_description": "Deletes an issue security level",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issuesecurityschemes/:schemeId/level/:levelId/member",
+          "argument_description": "Adds members to the issue security level",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuesecurityschemes/:schemeId/level/:levelId/member/:memberId",
+          "argument_description": "Removes an issue security level member from an issue security scheme",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_types",
+      "description": "This resource represents issues types. Use it to:\n\n *  get, create, update, and delete issue types.\n *  get all issue types for a user.\n *  get alternative issue types.\n *  set an avatar for an issue type.",
+      "arguments": [
+        {
+          "argument_name": "issuetype",
+          "argument_description": "Returns all issue types",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype",
+          "argument_description": "Creates an issue type and adds it to the default issue type scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/project",
+          "argument_description": "Returns issue types for a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:id",
+          "argument_description": "Returns an issue type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:id",
+          "argument_description": "Updates the issue type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:id",
+          "argument_description": "Deletes the issue type",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issuetype/:id/alternatives",
+          "argument_description": "Returns a list of issue types that can be used to replace the issue type",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:id/avatar2",
+          "argument_description": "Loads an avatar for the issue type",
+          "argument_type": "*/*"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_type_schemes",
+      "description": "This resource represents issue type schemes in classic projects. Use it to:\n\n *  get issue type schemes and a list of the projects that use them.\n *  associate issue type schemes with projects.\n *  add issue types to issue type schemes.\n *  delete issue types from issue type schemes.\n *  create, update, and delete issue type schemes.\n *  change the order of issue types in issue type schemes.",
+      "arguments": [
+        {
+          "argument_name": "issuetypescheme",
+          "argument_description": "Returns a [paginated](#pagination) list of issue type schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme",
+          "argument_description": "Creates an issue type scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/mapping",
+          "argument_description": "Returns a [paginated](#pagination) list of issue type scheme items",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/project",
+          "argument_description": "Returns a [paginated](#pagination) list of issue type schemes and, for each issue type scheme, a list of the projects that use it",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/project",
+          "argument_description": "Assigns an issue type scheme to a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/:issueTypeSchemeId",
+          "argument_description": "Updates an issue type scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/:issueTypeSchemeId",
+          "argument_description": "Deletes an issue type scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issuetypescheme/:issueTypeSchemeId/issuetype",
+          "argument_description": "Adds issue types to an issue type scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/:issueTypeSchemeId/issuetype/move",
+          "argument_description": "Changes the order of issue types in an issue type scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescheme/:issueTypeSchemeId/issuetype/:issueTypeId",
+          "argument_description": "Removes an issue type from an issue type scheme",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_type_screen_schemes",
+      "description": "This resource represents issue type screen schemes. Use it to:\n\n *  get issue type screen schemes and a list of the projects that use them.\n *  create issue type screen schemes.\n *  update issue type screen schemes.\n *  delete issue type screen schemes.\n *  associate issue type screen schemes with projects.\n *  append issue type to screen scheme mappings to issue type screen schemes.\n *  remove issue type to screen scheme mappings from issue type screen schemes.\n *  update default screen scheme of issue type screen scheme.",
+      "arguments": [
+        {
+          "argument_name": "issuetypescreenscheme",
+          "argument_description": "Returns a [paginated](#pagination) list of issue type screen schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme",
+          "argument_description": "Creates an issue type screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/mapping",
+          "argument_description": "Returns a [paginated](#pagination) list of issue type screen scheme items",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/project",
+          "argument_description": "Returns a [paginated](#pagination) list of issue type screen schemes and, for each issue type screen scheme, a list of the projects that use it",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/project",
+          "argument_description": "Assigns an issue type screen scheme to a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/:issueTypeScreenSchemeId",
+          "argument_description": "Updates an issue type screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/:issueTypeScreenSchemeId",
+          "argument_description": "Deletes an issue type screen scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issuetypescreenscheme/:issueTypeScreenSchemeId/mapping",
+          "argument_description": "Appends issue type to screen scheme mappings to an issue type screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/:issueTypeScreenSchemeId/mapping/default",
+          "argument_description": "Updates the default screen scheme of an issue type screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/:issueTypeScreenSchemeId/mapping/remove",
+          "argument_description": "Removes issue type to screen scheme mappings from an issue type screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetypescreenscheme/:issueTypeScreenSchemeId/project",
+          "argument_description": "Returns a [paginated](#pagination) list of projects associated with an issue type screen scheme",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_type_properties",
+      "description": "This resource represents [issue type](#api-group-Issue-types) properties, which provides for storing custom data against an issue type. Use it to get, create, and delete issue type properties as well as obtain the keys of all properties on a issues type. Issue type properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).",
+      "arguments": [
+        {
+          "argument_name": "issuetype/:issueTypeId/properties",
+          "argument_description": "Returns all the [issue type property](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:issueTypeId/properties/:propertyKey",
+          "argument_description": "Returns the key and value of the [issue type property](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:issueTypeId/properties/:propertyKey",
+          "argument_description": "Creates or updates the value of the [issue type property](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issuetype/:issueTypeId/properties/:propertyKey",
+          "argument_description": "Deletes the [issue type property](https://developer",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_votes",
+      "description": "This resource represents votes cast by users on an issue. Use it to get details of votes on an issue as well as cast and withdrawal votes.",
+      "arguments": [
+        {
+          "argument_name": "issue/:issueIdOrKey/votes",
+          "argument_description": "Returns details about the votes on an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/votes",
+          "argument_description": "Adds the user's vote to an issue",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/votes",
+          "argument_description": "Deletes a user's vote from an issue",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_watchers",
+      "description": "This resource represents users watching an issue. Use it to get details of users watching an issue as well as start and stop a user watching an issue.",
+      "arguments": [
+        {
+          "argument_name": "issue/watching",
+          "argument_description": "Returns, for the user, details of the watched status of issues from a list",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/watchers",
+          "argument_description": "Returns the watchers for an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/watchers",
+          "argument_description": "Adds a user as a watcher of an issue by passing the account ID of the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/watchers",
+          "argument_description": "Deletes a user as a watcher of an issue",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_worklogs",
+      "description": "This resource represents issue worklogs. Use it to:\n\n *  get, create, update, and delete worklogs.\n *  obtain lists of updated or deleted worklogs.",
+      "arguments": [
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog",
+          "argument_description": "Returns worklogs for an issue, starting from the oldest worklog or from the worklog started on or after a date and time",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog",
+          "argument_description": "Adds a worklog to an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:id",
+          "argument_description": "Returns a worklog",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:id",
+          "argument_description": "Updates a worklog",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:id",
+          "argument_description": "Deletes a worklog from an issue",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "worklog/deleted",
+          "argument_description": "Returns a list of IDs and delete timestamps for worklogs deleted after a date and time",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "worklog/list",
+          "argument_description": "Returns worklog details for a list of worklog IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "worklog/updated",
+          "argument_description": "Returns a list of IDs and update timestamps for worklogs updated after a date and time",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "issue_worklog_properties",
+      "description": "This resource represents [issue worklog](#api-group-Issue-worklogs) properties, which provides for storing custom data against an issue worklog. Use it to get, create, and delete issue worklog properties as well as obtain the keys of all properties on a issue worklog. Issue worklog properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).",
+      "arguments": [
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:worklogId/properties",
+          "argument_description": "Returns the keys of all properties for a worklog",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:worklogId/properties/:propertyKey",
+          "argument_description": "Returns the value of a worklog property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:worklogId/properties/:propertyKey",
+          "argument_description": "Sets the value of a worklog property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "issue/:issueIdOrKey/worklog/:worklogId/properties/:propertyKey",
+          "argument_description": "Deletes a worklog property",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "jira_expressions",
+      "description": "This resource is a collection of operations for [Jira expressions](https://developer.atlassian.com/cloud/jira/platform/jira-expressions/).",
+      "arguments": [
+        {
+          "argument_name": "expression/analyse",
+          "argument_description": "Analyses and validates Jira expressions",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "expression/eval",
+          "argument_description": "Evaluates a Jira expression and returns its value",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "jira_settings",
+      "description": "This resource represents various settings in Jira. Use it to get and update Jira settings and properties.",
+      "arguments": [
+        {
+          "argument_name": "application-properties",
+          "argument_description": "Returns all application properties or an application property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "application-properties/advanced-settings",
+          "argument_description": "Returns the application properties that are accessible on the *Advanced Settings* page",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "application-properties/:id",
+          "argument_description": "Changes the value of an application property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "configuration",
+          "argument_description": "Returns the [global settings](https://confluence",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "jql",
+      "description": "This resource represents JQL search auto-complete details. Use it to obtain JQL search auto-complete data and suggestions for use in programmatic construction of queries or custom query builders. It also provides operations to:\n\n *  convert one or more JQL queries with user identifiers (username or user key) to equivalent JQL queries with account IDs.\n *  convert readable details in one or more JQL queries to IDs where a user doesn't have permission to view the entity whose details are readable.",
+      "arguments": [
+        {
+          "argument_name": "jql/autocompletedata",
+          "argument_description": "Returns reference data for JQL searches",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/autocompletedata",
+          "argument_description": "Returns reference data for JQL searches",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/autocompletedata/suggestions",
+          "argument_description": "Returns the JQL search auto complete suggestions for a field",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/parse",
+          "argument_description": "Parses and validates JQL queries",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/pdcleaner",
+          "argument_description": "Converts one or more JQL queries with user identifiers (username or user key) to equivalent JQL queries with account IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/sanitize",
+          "argument_description": "Sanitizes one or more JQL queries by converting readable details into IDs where a user doesn't have permission to view the entity",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "jql_functions_(apps)",
+      "description": "This resource represents JQL function's precomputations. Precomputation is a mapping between custom function call and JQL fragment returned by this function. Use it to get and update precomputations.",
+      "arguments": [
+        {
+          "argument_name": "jql/function/computation",
+          "argument_description": "Returns the list of a function's precomputations along with information about when they were created, updated, and last used",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "jql/function/computation",
+          "argument_description": "Update the precomputation value of a function created by a Forge/Connect app",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "labels",
+      "description": "This resource represents available labels. Use it to get available labels for the global label field.",
+      "arguments": [
+        {
+          "argument_name": "label",
+          "argument_description": "Returns a [paginated](#pagination) list of labels",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "license_metrics",
+      "description": "This resource represents license metrics. Use it to get available metrics for Jira licences.",
+      "arguments": [
+        {
+          "argument_name": "instance/license",
+          "argument_description": "Returns licensing information about the Jira instance",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "license/approximateLicenseCount",
+          "argument_description": "Returns the approximate number of user accounts across all Jira licenses",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "license/approximateLicenseCount/product/:applicationKey",
+          "argument_description": "Returns the total approximate number of user accounts for a single Jira license",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "myself",
+      "description": "This resource represents information about the current user, such as basic details, group membership, application roles, preferences, and locale. Use it to get, create, update, and delete (restore default) values of the user's preferences and locale.",
+      "arguments": [
+        {
+          "argument_name": "mypreferences",
+          "argument_description": "Returns the value of a preference of the current user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "mypreferences",
+          "argument_description": "Creates a preference for the user or updates a preference's value by sending a plain text string",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "mypreferences",
+          "argument_description": "Deletes a preference of the user, which restores the default value of system defined settings",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "mypreferences/locale",
+          "argument_description": "Returns the locale for the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "mypreferences/locale",
+          "argument_description": "Deprecated, use [ Update a user profile](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "mypreferences/locale",
+          "argument_description": "Deprecated, use [ Update a user profile](https://developer",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "myself",
+          "argument_description": "Returns details for the current user",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "permissions",
+      "description": "This resource represents permissions. Use it to obtain details of all permissions and determine whether the user has certain permissions.",
+      "arguments": [
+        {
+          "argument_name": "mypermissions",
+          "argument_description": "Returns a list of permissions indicating which permissions the user has",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissions",
+          "argument_description": "Returns all permissions, including:\n\n *  global permissions",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissions/check",
+          "argument_description": "Returns:\n\n *  for a list of global permissions, the global permissions granted to a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissions/project",
+          "argument_description": "Returns all the projects where the user is granted a list of project permissions",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "permission_schemes",
+      "description": "This resource represents permission schemes. Use it to get, create, update, and delete permission schemes as well as get, create, update, and delete details of the permissions granted in those schemes.",
+      "arguments": [
+        {
+          "argument_name": "permissionscheme",
+          "argument_description": "Returns all permission schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme",
+          "argument_description": "Creates a new permission scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId",
+          "argument_description": "Returns a permission scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId",
+          "argument_description": "Updates a permission scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId",
+          "argument_description": "Deletes a permission scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId/permission",
+          "argument_description": "Returns all permission grants for a permission scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId/permission",
+          "argument_description": "Creates a permission grant in a permission scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId/permission/:permissionId",
+          "argument_description": "Returns a permission grant",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "permissionscheme/:schemeId/permission/:permissionId",
+          "argument_description": "Deletes a permission grant from a permission scheme",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "projects",
+      "description": "This resource represents projects. Use it to get, create, update, and delete projects. Also get statuses available to a project, a project's notification schemes, and update a project's type.",
+      "arguments": [
+        {
+          "argument_name": "project",
+          "argument_description": "Returns all projects visible to the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project",
+          "argument_description": "Creates a project based on a project type template, as shown in the following table:\n\n| Project Type Key | Project Template Key |  \n|--|--|  \n| `business` | `com",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/recent",
+          "argument_description": "Returns a list of up to 20 projects recently viewed by the user that are still visible to the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/search",
+          "argument_description": "Returns a [paginated](#pagination) list of projects visible to the user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey",
+          "argument_description": "Returns the [project details](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey",
+          "argument_description": "Updates the [project details](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey",
+          "argument_description": "Deletes a project",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/archive",
+          "argument_description": "Archives a project",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/delete",
+          "argument_description": "Deletes a project asynchronously",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/restore",
+          "argument_description": "Restores a project that has been archived or placed in the Jira recycle bin",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/statuses",
+          "argument_description": "Returns the valid statuses for a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectId/hierarchy",
+          "argument_description": "Get the issue type hierarchy for a next-gen project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectKeyOrId/notificationscheme",
+          "argument_description": "Gets a [notification scheme](https://confluence",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_avatars",
+      "description": "This resource represents avatars associated with a project. Use it to get, load, set, and remove project avatars.",
+      "arguments": [
+        {
+          "argument_name": "project/:projectIdOrKey/avatar",
+          "argument_description": "Sets the avatar displayed for a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/avatar/:id",
+          "argument_description": "Deletes a custom avatar from a project",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/avatar2",
+          "argument_description": "Loads an avatar for a project",
+          "argument_type": "*/*"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/avatars",
+          "argument_description": "Returns all project avatars, grouped by system and custom avatars",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_categories",
+      "description": "This resource represents project categories. Use it to create, update, and delete project categories as well as obtain a list of all project categories and details of individual categories. For more information on managing project categories, see [Adding, assigning, and deleting project categories](https://confluence.atlassian.com/x/-A5WMg).",
+      "arguments": [
+        {
+          "argument_name": "projectCategory",
+          "argument_description": "Returns all project categories",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "projectCategory",
+          "argument_description": "Creates a project category",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "projectCategory/:id",
+          "argument_description": "Returns a project category",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "projectCategory/:id",
+          "argument_description": "Updates a project category",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "projectCategory/:id",
+          "argument_description": "Deletes a project category",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "project_components",
+      "description": "This resource represents project components. Use it to get, create, update, and delete project components. Also get components for project and get a count of issues by component.",
+      "arguments": [
+        {
+          "argument_name": "component",
+          "argument_description": "Creates a component",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "component/:id",
+          "argument_description": "Returns a component",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "component/:id",
+          "argument_description": "Updates a component",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "component/:id",
+          "argument_description": "Deletes a component",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "component/:id/relatedIssueCounts",
+          "argument_description": "Returns the counts of issues assigned to the component",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/component",
+          "argument_description": "Returns a [paginated](#pagination) list of all components in a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/components",
+          "argument_description": "Returns all components in a project",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_email",
+      "description": "This resource represents the email address used to send a project's notifications. Use it to get and set the [project's sender email address](https://confluence.atlassian.com/x/dolKLg).",
+      "arguments": [
+        {
+          "argument_name": "project/:projectId/email",
+          "argument_description": "Returns the [project's sender email address](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectId/email",
+          "argument_description": "Sets the [project's sender email address](https://confluence",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_features",
+      "description": "This resource represents project features. Use it to get the list of features for a project and modify the state of a feature. The project feature endpoint is available only for Jira Software, both for team- and company-managed projects.",
+      "arguments": [
+        {
+          "argument_name": "project/:projectIdOrKey/features",
+          "argument_description": "Returns the list of features for a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/features/:featureKey",
+          "argument_description": "Sets the state of a project feature",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_key_and_name_validation",
+      "description": "This resource provides validation for project keys and names.",
+      "arguments": [
+        {
+          "argument_name": "projectvalidate/key",
+          "argument_description": "Validates a project key by confirming the key is a valid string and not in use",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "projectvalidate/validProjectKey",
+          "argument_description": "Validates a project key and, if the key is invalid or in use, generates a valid random string for the project key",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "projectvalidate/validProjectName",
+          "argument_description": "Checks that a project name isn't in use",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_permission_schemes",
+      "description": "This resource represents permission schemes for a project. Use this resource to:\n\n *  get details of a project's issue security levels available to the calling user.\n *  get the permission scheme associated with the project or assign different permission scheme to the project.\n *  get details of a project's issue security scheme.\n\nSee [Managing project permissions](https://confluence.atlassian.com/x/yodKLg) for more information about permission schemes.",
+      "arguments": [
+        {
+          "argument_name": "project/:projectKeyOrId/issuesecuritylevelscheme",
+          "argument_description": "Returns the [issue security scheme](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectKeyOrId/permissionscheme",
+          "argument_description": "Gets the [permission scheme](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectKeyOrId/permissionscheme",
+          "argument_description": "Assigns a permission scheme with a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectKeyOrId/securitylevel",
+          "argument_description": "Returns all [issue security](https://confluence",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_properties",
+      "description": "This resource represents [project](#api-group-Projects) properties, which provides for storing custom data against a project. Use it to get, create, and delete project properties as well as get a list of property keys for a project. Project properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).",
+      "arguments": [
+        {
+          "argument_name": "project/:projectIdOrKey/properties",
+          "argument_description": "Returns all [project property](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/properties/:propertyKey",
+          "argument_description": "Returns the value of a [project property](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/properties/:propertyKey",
+          "argument_description": "Sets the value of the [project property](https://developer",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/properties/:propertyKey",
+          "argument_description": "Deletes the [property](https://developer",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "project_roles",
+      "description": "This resource represents the roles that users can play in projects. Use this resource to get, create, update, and delete project roles.",
+      "arguments": [
+        {
+          "argument_name": "project/:projectIdOrKey/role",
+          "argument_description": "Returns a list of [project roles](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/role/:id",
+          "argument_description": "Returns a project role's details and actors associated with the project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/roledetails",
+          "argument_description": "Returns all [project roles](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role",
+          "argument_description": "Gets a list of all project roles, complete with project role details and default actors",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role",
+          "argument_description": "Creates a new project role with no [default actors](#api-rest-api-3-resolution-get)",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role/:id",
+          "argument_description": "Gets the project role details and the default actors associated with the role",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role/:id",
+          "argument_description": "Updates the project role's name and description",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role/:id",
+          "argument_description": "Updates either the project role's name or its description",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role/:id",
+          "argument_description": "Deletes a project role",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "project_role_actors",
+      "description": "This resource represents the users assigned to [project roles](#api-group-Issue-comments). Use it to get, add, and remove default users from project roles. Also use it to add and remove users from a project role associated with a project.",
+      "arguments": [
+        {
+          "argument_name": "project/:projectIdOrKey/role/:id",
+          "argument_description": "Sets the actors for a project role for a project, replacing all existing actors",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/role/:id",
+          "argument_description": "Adds actors to a project role for the project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/role/:id",
+          "argument_description": "Deletes actors from a project role for the project",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "role/:id/actors",
+          "argument_description": "Returns the [default actors](#api-rest-api-3-resolution-get) for the project role",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role/:id/actors",
+          "argument_description": "Adds [default actors](#api-rest-api-3-resolution-get) to a role",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "role/:id/actors",
+          "argument_description": "Deletes the [default actors](#api-rest-api-3-resolution-get) from a project role",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_types",
+      "description": "This resource represents project types. Use it to obtain a list of all project types, a list of project types accessible to the calling user, and details of a project type.",
+      "arguments": [
+        {
+          "argument_name": "project/type",
+          "argument_description": "Returns all [project types](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/type/accessible",
+          "argument_description": "Returns all [project types](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/type/:projectTypeKey",
+          "argument_description": "Returns a [project type](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/type/:projectTypeKey/accessible",
+          "argument_description": "Returns a [project type](https://confluence",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "project_versions",
+      "description": "This resource represents project versions. Use it to get, get lists of, create, update, move, merge, and delete project versions. This resource also provides counts of issues by version.",
+      "arguments": [
+        {
+          "argument_name": "project/:projectIdOrKey/version",
+          "argument_description": "Returns a [paginated](#pagination) list of all versions in a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "project/:projectIdOrKey/versions",
+          "argument_description": "Returns all versions in a project",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version",
+          "argument_description": "Creates a project version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id",
+          "argument_description": "Returns a project version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id",
+          "argument_description": "Updates a project version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id",
+          "argument_description": "Deletes a project version",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "version/:id/mergeto/:moveIssuesTo",
+          "argument_description": "Merges two project versions",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "version/:id/move",
+          "argument_description": "Modifies the version's sequence within the project, which affects the display order of the versions in Jira",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id/relatedIssueCounts",
+          "argument_description": "Returns the following counts for a version:\n\n *  Number of issues where the `fixVersion` is set to the version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id/relatedwork",
+          "argument_description": "Returns related work items for the given version id",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id/relatedwork",
+          "argument_description": "Updates the given related work",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id/relatedwork",
+          "argument_description": "Creates a related work for the given version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id/removeAndSwap",
+          "argument_description": "Deletes a project version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:id/unresolvedIssueCount",
+          "argument_description": "Returns counts of the issues and unresolved issues for the project version",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "version/:versionId/relatedwork/:relatedWorkId",
+          "argument_description": "Deletes the given related work for the given version",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "screens",
+      "description": "This resource represents the screens used to record issue details. Use it to:\n\n *  get details of all screens.\n *  get details of all the fields available for use on screens.\n *  create screens.\n *  delete screens.\n *  update screens.\n *  add a field to the default screen.",
+      "arguments": [
+        {
+          "argument_name": "field/:fieldId/screens",
+          "argument_description": "Returns a [paginated](#pagination) list of the screens a field is used in",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens",
+          "argument_description": "Returns a [paginated](#pagination) list of all screens or those specified by one or more screen IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens",
+          "argument_description": "Creates a screen with a default field tab",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/addToDefault/:fieldId",
+          "argument_description": "Adds a field to the default tab of the default screen",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId",
+          "argument_description": "Updates a screen",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId",
+          "argument_description": "Deletes a screen",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "screens/:screenId/availableFields",
+          "argument_description": "Returns the fields that can be added to a tab on a screen",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "screen_tabs",
+      "description": "This resource represents the screen tabs used to record issue details. Use it to get, create, update, move, and delete screen tabs.",
+      "arguments": [
+        {
+          "argument_name": "screens/tabs",
+          "argument_description": "Returns the list of tabs for a bulk of screens",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId/tabs",
+          "argument_description": "Returns the list of tabs for a screen",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId/tabs",
+          "argument_description": "Creates a tab for a screen",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId",
+          "argument_description": "Updates the name of a screen tab",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId",
+          "argument_description": "Deletes a screen tab",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId/move/:pos",
+          "argument_description": "Moves a screen tab",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "screen_tab_fields",
+      "description": "This resource represents the screen tab fields used to record issue details. Use it to get, add, move, and remove fields from screen tabs.",
+      "arguments": [
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId/fields",
+          "argument_description": "Returns all fields for a screen tab",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId/fields",
+          "argument_description": "Adds a field to a screen tab",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId/fields/:id",
+          "argument_description": "Removes a field from a screen tab",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "screens/:screenId/tabs/:tabId/fields/:id/move",
+          "argument_description": "Moves a screen tab field",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "screen_schemes",
+      "description": "This resource represents screen schemes in classic projects. Use it to get, create, update, and delete screen schemes.",
+      "arguments": [
+        {
+          "argument_name": "screenscheme",
+          "argument_description": "Returns a [paginated](#pagination) list of screen schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screenscheme",
+          "argument_description": "Creates a screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screenscheme/:screenSchemeId",
+          "argument_description": "Updates a screen scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "screenscheme/:screenSchemeId",
+          "argument_description": "Deletes a screen scheme",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "server_info",
+      "description": "This resource provides information about the Jira instance.",
+      "arguments": [
+        {
+          "argument_name": "serverInfo",
+          "argument_description": "Returns information about the Jira instance",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "status",
+      "description": "This resource represents statuses. Use it to search, get, create, delete, and change statuses.",
+      "arguments": [
+        {
+          "argument_name": "statuses",
+          "argument_description": "Returns a list of the statuses specified by one or more status IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "statuses",
+          "argument_description": "Updates statuses by ID",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "statuses",
+          "argument_description": "Creates statuses for a global or project scope",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "statuses",
+          "argument_description": "Deletes statuses by ID",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "statuses/search",
+          "argument_description": "Returns a [paginated](https://developer",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "tasks",
+      "description": "This resource represents a [long-running asynchronous tasks](#async-operations). Use it to obtain details about the progress of a long-running task or cancel a long-running task.",
+      "arguments": [
+        {
+          "argument_name": "task/:taskId",
+          "argument_description": "Returns the status of a [long-running asynchronous task](#async)",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "task/:taskId/cancel",
+          "argument_description": "Cancels a task",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "time_tracking",
+      "description": "This resource represents time tracking and time tracking providers. Use it to get and set the time tracking provider, get and set the time tracking options, and disable time tracking.",
+      "arguments": [
+        {
+          "argument_name": "configuration/timetracking",
+          "argument_description": "Returns the time tracking provider that is currently selected",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "configuration/timetracking",
+          "argument_description": "Selects a time tracking provider",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "configuration/timetracking/list",
+          "argument_description": "Returns all time tracking providers",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "configuration/timetracking/options",
+          "argument_description": "Returns the time tracking settings",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "configuration/timetracking/options",
+          "argument_description": "Sets the time tracking settings",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "users",
+      "description": "This resource represent users. Use it to:\n\n *  get, get a list of, create, and delete users.\n *  get, set, and reset a user's default issue table columns.\n *  get a list of the groups the user belongs to.\n *  get a list of user account IDs for a list of usernames or user keys.",
+      "arguments": [
+        {
+          "argument_name": "user",
+          "argument_description": "Returns a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user",
+          "argument_description": "Creates a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user",
+          "argument_description": "Deletes a user",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "user/bulk",
+          "argument_description": "Returns a [paginated](#pagination) list of the users specified by one or more account IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/bulk/migration",
+          "argument_description": "Returns the account IDs for the users specified in the `key` or `username` parameters",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/columns",
+          "argument_description": "Returns the default [issue table columns](https://confluence",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/columns",
+          "argument_description": "Sets the default [ issue table columns](https://confluence",
+          "argument_type": "*/*"
+        },
+        {
+          "argument_name": "user/columns",
+          "argument_description": "Resets the default [ issue table columns](https://confluence",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "user/email",
+          "argument_description": "Returns a user's email address",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/email/bulk",
+          "argument_description": "Returns a user's email address",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/groups",
+          "argument_description": "Returns the groups to which a user belongs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "users",
+          "argument_description": "Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "users/search",
+          "argument_description": "Returns a list of all users, including active users, inactive users and previously deleted users that have an Atlassian account",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "user_properties",
+      "description": "This resource represents [user](#api-group-Users) properties and provides for storing custom data against a user. Use it to get, create, and delete user properties as well as get a list of property keys for a user. This resourse is designed for integrations and apps to store per-user data and settings. This enables data used to customized the user experience to be kept in the Jira Cloud instance's database. User properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).\n\nThis resource does not access the [user properties](https://confluence.atlassian.com/x/8YxjL) created and maintained in Jira.",
+      "arguments": [
+        {
+          "argument_name": "user/properties",
+          "argument_description": "Returns the keys of all properties for a user",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/properties/:propertyKey",
+          "argument_description": "Returns the value of a user's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/properties/:propertyKey",
+          "argument_description": "Sets the value of a user's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/properties/:propertyKey",
+          "argument_description": "Deletes a property from a user",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "user_search",
+      "description": "This resource represents various ways to search for and find users. Use it to obtain list of users including users assignable to projects and issues, users with permissions, user lists for pickup fields, and user lists generated using structured queries. Note that the operations in this resource only return users found within the first 1000 users.",
+      "arguments": [
+        {
+          "argument_name": "user/assignable/multiProjectSearch",
+          "argument_description": "Returns a list of users who can be assigned issues in one or more projects",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/assignable/search",
+          "argument_description": "Returns a list of users that can be assigned to an issue",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/permission/search",
+          "argument_description": "Returns a list of users who fulfill these criteria:\n\n *  their user attributes match a search string",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/picker",
+          "argument_description": "Returns a list of users whose attributes match the query term",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/search",
+          "argument_description": "Returns a list of active users that match the search string and property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/search/query",
+          "argument_description": "Finds users with a structured query and returns a [paginated](#pagination) list of user details",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/search/query/key",
+          "argument_description": "Finds users with a structured query and returns a [paginated](#pagination) list of user keys",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "user/viewissue/search",
+          "argument_description": "Returns a list of users who fulfill these criteria:\n\n *  their user attributes match a search string",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "webhooks",
+      "description": "This resource represents webhooks. Webhooks are calls sent to a URL when an event occurs in Jira for issues specified by a JQL query. Only Connect and OAuth 2.0 apps can register and manage webhooks. For more information, see [Webhooks](https://developer.atlassian.com/cloud/jira/platform/webhooks/#registering-a-webhook-via-the-jira-rest-api-for-connect-apps).",
+      "arguments": [
+        {
+          "argument_name": "webhook",
+          "argument_description": "Returns a [paginated](#pagination) list of the webhooks registered by the calling app",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "webhook",
+          "argument_description": "Registers webhooks",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "webhook",
+          "argument_description": "Removes webhooks by ID",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "webhook/failed",
+          "argument_description": "Returns webhooks that have recently failed to be delivered to the requesting app after the maximum number of retries",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "webhook/refresh",
+          "argument_description": "Extends the life of webhook",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "workflows",
+      "description": "This resource represents workflows. Use it to:\n\n *  Get workflows\n *  Create workflows\n *  Update workflows\n *  Delete inactive workflows\n *  Get workflow capabilities",
+      "arguments": [
+        {
+          "argument_name": "workflow",
+          "argument_description": "Returns all workflows in Jira or a workflow",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow",
+          "argument_description": "Creates a workflow",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/search",
+          "argument_description": "Returns a [paginated](#pagination) list of published classic workflows",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/:entityId",
+          "argument_description": "Deletes a workflow",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "workflows",
+          "argument_description": "Returns a list of workflows and related statuses by providing workflow names, workflow IDs, or project and issue types",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflows/capabilities",
+          "argument_description": "Get the list of workflow capabilities for a specific workflow using either the workflow ID, or the project and issue type ID pair",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflows/create",
+          "argument_description": "Create workflows and related statuses",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflows/create/validation",
+          "argument_description": "Validate the payload for bulk create workflows",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflows/update",
+          "argument_description": "Update workflows and related statuses",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflows/update/validation",
+          "argument_description": "Validate the payload for bulk update workflows",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_transition_rules",
+      "description": "This resource represents workflow transition rules.",
+      "arguments": [
+        {
+          "argument_name": "workflow/rule/config",
+          "argument_description": "Returns a [paginated](#pagination) list of workflows with transition rules",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/rule/config",
+          "argument_description": "Updates configuration of workflow transition rules",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/rule/config/delete",
+          "argument_description": "Deletes workflow transition rules from one or more workflows",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_schemes",
+      "description": "This resource represents workflow schemes.",
+      "arguments": [
+        {
+          "argument_name": "workflowscheme",
+          "argument_description": "Returns a [paginated](#pagination) list of all workflow schemes, not including draft workflow schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme",
+          "argument_description": "Creates a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/read",
+          "argument_description": "Returns a list of workflow schemes by providing workflow scheme IDs or project IDs",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/update",
+          "argument_description": "Updates company-managed and team-managed project workflow schemes",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/update/mappings",
+          "argument_description": "Gets the required status mappings for the desired changes to a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id",
+          "argument_description": "Returns a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id",
+          "argument_description": "Updates a company-manged project workflow scheme, including the name, default workflow, issue type to project mappings, and more",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id",
+          "argument_description": "Deletes a workflow scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "workflowscheme/:id/default",
+          "argument_description": "Returns the default workflow for a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/default",
+          "argument_description": "Sets the default workflow for a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/default",
+          "argument_description": "Resets the default workflow for a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/issuetype/:issueType",
+          "argument_description": "Returns the issue type-workflow mapping for an issue type in a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/issuetype/:issueType",
+          "argument_description": "Sets the workflow for an issue type in a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/issuetype/:issueType",
+          "argument_description": "Deletes the issue type-workflow mapping for an issue type in a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/workflow",
+          "argument_description": "Returns the workflow-issue type mappings for a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/workflow",
+          "argument_description": "Sets the issue types for a workflow in a workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/workflow",
+          "argument_description": "Deletes the workflow-issue type mapping for a workflow in a workflow scheme",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_scheme_project_associations",
+      "description": "This resource represents the associations between workflow schemes and projects.\n\nFor more information, see [Managing your workflows](https://confluence.atlassian.com/x/q4hKLg).",
+      "arguments": [
+        {
+          "argument_name": "workflowscheme/project",
+          "argument_description": "Returns a list of the workflow schemes associated with a list of projects",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/project",
+          "argument_description": "Assigns a workflow scheme to a project",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_scheme_drafts",
+      "description": "This resource represents draft workflow schemes. Use it to manage drafts of workflow schemes.\n\nA workflow scheme maps issue types to workflows. A workflow scheme can be associated with one or more projects, which enables the projects to use the workflow-issue type mappings.\n\nActive workflow schemes (workflow schemes that are used by projects) cannot be edited. Editing an active workflow scheme creates a draft copy of the scheme. The draft workflow scheme can then be edited and published (replacing the active scheme).\n\nSee [Configuring workflow schemes](https://confluence.atlassian.com/x/tohKLg) for more information.",
+      "arguments": [
+        {
+          "argument_name": "workflowscheme/:id/createdraft",
+          "argument_description": "Create a draft workflow scheme from an active workflow scheme, by copying the active workflow scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft",
+          "argument_description": "Returns the draft workflow scheme for an active workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft",
+          "argument_description": "Updates a draft workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft",
+          "argument_description": "Deletes a draft workflow scheme",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/default",
+          "argument_description": "Returns the default workflow for a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/default",
+          "argument_description": "Sets the default workflow for a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/default",
+          "argument_description": "Resets the default workflow for a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/issuetype/:issueType",
+          "argument_description": "Returns the issue type-workflow mapping for an issue type in a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/issuetype/:issueType",
+          "argument_description": "Sets the workflow for an issue type in a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/issuetype/:issueType",
+          "argument_description": "Deletes the issue type-workflow mapping for an issue type in a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/publish",
+          "argument_description": "Publishes a draft workflow scheme",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/workflow",
+          "argument_description": "Returns the workflow-issue type mappings for a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/workflow",
+          "argument_description": "Sets the issue types for a workflow in a workflow scheme's draft",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflowscheme/:id/draft/workflow",
+          "argument_description": "Deletes the workflow-issue type mapping for a workflow in a workflow scheme's draft",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_statuses",
+      "description": "This resource represents issue workflow statuses. Use it to obtain a list of all statuses associated with workflows and the details of a status.",
+      "arguments": [
+        {
+          "argument_name": "status",
+          "argument_description": "Returns a list of all statuses associated with active workflows",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "status/:idOrName",
+          "argument_description": "Returns a status",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_status_categories",
+      "description": "This resource represents status categories. Use it to obtain a list of all status categories and the details of a category. Status categories provided a mechanism for categorizing [statuses](#api-group-Workflow-statuses).",
+      "arguments": [
+        {
+          "argument_name": "statuscategory",
+          "argument_description": "Returns a list of all status categories",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "statuscategory/:idOrKey",
+          "argument_description": "Returns a status category",
+          "argument_type": "application/json"
+        }
+      ]
+    },
+    {
+      "tool_name": "workflow_transition_properties",
+      "description": "This resource represents workflow transition properties, which provides for storing custom data against a workflow transition. Use it to get, create, and delete workflow transition properties as well as get a list of property keys for a workflow transition. Workflow transition properties are a type of [entity property](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).",
+      "arguments": [
+        {
+          "argument_name": "workflow/transitions/:transitionId/properties",
+          "argument_description": "Returns the properties on a workflow transition",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/transitions/:transitionId/properties",
+          "argument_description": "Updates a workflow transition by changing the property value",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/transitions/:transitionId/properties",
+          "argument_description": "Adds a property to a workflow transition",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "workflow/transitions/:transitionId/properties",
+          "argument_description": "Deletes a property from a workflow transition",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "app_properties",
+      "description": "This resource represents app properties. Use it to store arbitrary data for your\n[Connect app](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps).",
+      "arguments": [
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/addons/:addonKey/properties",
+          "argument_description": "Gets all the properties of an app",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/addons/:addonKey/properties/:propertyKey",
+          "argument_description": "Returns the key and value of an app's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/addons/:addonKey/properties/:propertyKey",
+          "argument_description": "Sets the value of an app's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/addons/:addonKey/properties/:propertyKey",
+          "argument_description": "Deletes an app's property",
+          "argument_type": ""
+        },
+        {
+          "argument_name": "{{basePath}}rest/forge/1/app/properties/:propertyKey",
+          "argument_description": "Sets the value of a Forge app's property",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "{{basePath}}rest/forge/1/app/properties/:propertyKey",
+          "argument_description": "Deletes a Forge app's property",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "dynamic_modules",
+      "description": "This resource represents [modules registered dynamically](https://developer.atlassian.com/cloud/jira/platform/dynamic-modules/)\nby [Connect apps](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps).",
+      "arguments": [
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/app/module/dynamic",
+          "argument_description": "Returns all modules registered dynamically by the calling app",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/app/module/dynamic",
+          "argument_description": "Registers a list of modules",
+          "argument_type": "application/json"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/app/module/dynamic",
+          "argument_description": "Remove all or a list of modules registered by the calling app",
+          "argument_type": ""
+        }
+      ]
+    },
+    {
+      "tool_name": "app_migration",
+      "description": "This resource supports [app migrations](https://developer.atlassian.com/platform/app-migration/). Use it to:\n- [to request migrated workflow rules details](https://developer.atlassian.com/platform/app-migration/tutorials/migration-app-workflow-rules/).\n- [perform bulk updates of entity properties](https://developer.atlassian.com/platform/app-migration/tutorials/entity-properties-bulk-api/).\n- [perform bulk updates of issue custom field values](https://developer.atlassian.com/platform/app-migration/tutorials/migrating-app-custom-fields/).",
+      "arguments": [
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/migration/field",
+          "argument_description": "Updates the value of a custom field added by Connect apps on one or more issues",
+          "argument_type": "{{Atlassian-Transfer-Id}}"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/migration/properties/:entityType",
+          "argument_description": "Updates the values of multiple entity properties for an object, up to 50 updates per request",
+          "argument_type": "{{Atlassian-Transfer-Id}}"
+        },
+        {
+          "argument_name": "{{basePath}}rest/atlassian-connect/1/migration/workflow/rule/search",
+          "argument_description": "Returns configurations for workflow transition rules migrated from server to cloud and owned by the calling Connect app",
+          "argument_type": "{{Atlassian-Transfer-Id}}"
+        }
+      ]
+    },
+    
+    {
+        "tool_name": "/artifacts.locate",
+        "description": "Gets the download URL for the artifact.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the artifact to get the URL for.",
+                "argument_type": "string",
+                "example": "ARTIFACT-12345"
+            },
+            {
+                "argument_name": "version",
+                "argument_description": "The version of the artifact that needs to be fetched.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/artifacts.prepare",
+        "description": "Creates an artifact and generates an upload URL for its data.\n",
+        "arguments": [
+            {
+                "argument_name": "file_name",
+                "argument_description": "The name of the file that's being uploaded.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/auth-tokens.create",
+        "description": "Creates a JWT corresponding to the requested token type for the\nauthenticated user.\n",
+        "arguments": [
+            {
+                "argument_name": "aud",
+                "argument_description": "The expected audience values with respect to the token.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "client_id",
+                "argument_description": "An identifier that represents the application which is requesting\nthe token. If no client_id is present in the request to generate an\napplication access token (AAT), DevRev will generate a client_id.\nThis client_id is only associated with an AAT.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "expires_in",
+                "argument_description": "The expected validity lifetime of the token in number of days.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "scope",
+                "argument_description": "The requested set of scopes associated with the issued token. A\nspace-delimited list of values in which the order of values does\nnot matter.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "subject_token",
+                "argument_description": "Represents the entity that requests the token. Not required when\nrequesting an application access token (AAT).\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "token_hint",
+                "argument_description": "A hint that identifies the token.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/auth-tokens.delete",
+        "description": "Revokes the token that matches the given token ID issued under the\ngiven Dev organization.\n",
+        "arguments": [
+            {
+                "argument_name": "token_id",
+                "argument_description": "The unique identifier for the token under a given Dev organization.\nIf no token ID is provided, then the token ID will be set from the\nJTI claim of the token in the authorization header.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/auth-tokens.get",
+        "description": "Gets the token metadata corresponding to the given token ID under the\ngiven Dev organization.\n",
+        "arguments": [
+            {
+                "argument_name": "token_id",
+                "argument_description": "The unique identifier of the token under a given Dev organization.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/auth-tokens.list",
+        "description": "Gets the token metadata for all the tokens corresponding to the given\ntoken type issued for a given subject.\n",
+        "arguments": [
+            {
+                "argument_name": "client_id",
+                "argument_description": "An identifier that represents the application, which requested the\ntoken. Only relevant for application access tokens.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "subject",
+                "argument_description": "The subject associated with the token. In the absence of this\nparameter, the ID of the authenticated entity is treated as the\nsubject.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/auth-tokens.self.delete",
+        "description": "Revokes all the tokens that matches the given token type created by the\nauthenticated user.\n",
+        "arguments": []
+    },
+    {
+        "tool_name": "/auth-tokens.update",
+        "description": "Updates token metadata of a token issued under a given Dev\norganization.\n",
+        "arguments": [
+            {
+                "argument_name": "token_hint",
+                "argument_description": "A hint that identifies the token.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "token_id",
+                "argument_description": "The unique identifier of the token under a given Dev organization.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/dev-orgs.auth-connections.create",
+        "description": "Creates a new enterprise authentication connection for a Dev\norganization. This authentication connection will not be enabled by\ndefault for the organization and the user will need to explicitly\nenable this. Keep in mind that at a time, only one authentication\nconnection can be enabled for a Dev organization. At present, only 5\nenterprise connections can be created by an organization.\n",
+        "arguments": [
+            {
+                "argument_name": "display_name",
+                "argument_description": "Display name of the authentication connection. This name will be\nvisible to all the users when they sign in to this Dev\norganization. For example, if the display_name is 'abclogin', then\nit would appear on the login button as 'Log in to abclogin'.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/dev-orgs.auth-connections.delete",
+        "description": "Deletes an authentication connection. Only enterprise connections which\nare explicitly set up for a Dev organization can be deleted. Default\nconnections can not be deleted using this method.\n",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection to be deleted.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/dev-orgs.auth-connections.get",
+        "description": "Retrieves the details for an authentication connection.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+
+    {
+        "tool_name": "/dev-orgs.auth-connections.toggle",
+        "description": "Enable or disable an authentication connection for a Dev organization.\nCurrently, only 1 authentication connection can be enabled at a time.\nWhen a new authentication connection is enabled, the connection which\nis currently enabled for the Dev organization is automatically\ndisabled.\n",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection to be toggled.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/dev-orgs.auth-connections.update",
+        "description": "Updates an authentication connection.",
+        "arguments": [
+            {
+                "argument_name": "display_name",
+                "argument_description": "New display name of the authentication connection. This name will\nbe visible to all the users when they sign in to this Dev\norganization. For example, if the display_name is 'abclogin', then\nit would appear on the login button as 'Log in to abclogin'.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "ID of the authentication connection which is to be updated.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/dev-users.get",
+        "description": "Gets the requested user's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "User ID of the requested Dev user.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/dev-users.list",
+        "description": "Lists users within your organization.",
+        "arguments": [
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "email",
+                "argument_description": "Filters Dev users based on email addresses.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of Dev users to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "sort_by",
+                "argument_description": "Fields to sort the Dev users by and the direction to sort them.\n",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "state",
+                "argument_description": "Filters Dev users based on state.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/parts.create",
+        "description": "Creates new [part](https://devrev.ai/docs/product/parts).",
+        "arguments": [
+            {
+                "argument_name": "artifacts",
+                "argument_description": "The IDs of the artifacts.",
+                "argument_type": "array",
+                "example": [
+                    "ARTIFACT-12345"
+                ]
+            },
+            {
+                "argument_name": "description",
+                "argument_description": "Description of the part.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "Name of the part.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "The users that own the part.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            }
+        ]
+    },
+    {
+        "tool_name": "/parts.delete",
+        "description": "Deletes a [part](https://devrev.ai/docs/product/parts).",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the part to delete.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            }
+        ]
+    },
+    {
+        "tool_name": "/parts.get",
+        "description": "Gets a [part's](https://devrev.ai/docs/product/parts) information.\n",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the part to retrieve.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            }
+        ]
+    },
+    {
+        "tool_name": "/parts.list",
+        "description": "Lists a collection of [parts](https://devrev.ai/docs/product/parts).\n",
+        "arguments": [
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for parts created by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of parts to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "Filters for parts of the provided name(s).",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for parts owned by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for parts of the provided type(s).",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/parts.update",
+        "description": "Updates a [part's](https://devrev.ai/docs/product/parts) information.\n",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "The updated description of the part.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the part to update.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "The updated name of the part.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/rev-orgs.create",
+        "description": "Creates a Rev organization in the authenticated user's Dev\norganization.\n",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "Description of the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "display_name",
+                "argument_description": "Name of the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "domain",
+                "argument_description": "Company's domain name. Example - 'devrev.ai'.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "external_ref",
+                "argument_description": "External ref is a custom unique identifier which is a reference to\nan unique id for this organization's data in some system of\nrecords.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "tier",
+                "argument_description": "The tier of the RevOrg.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/rev-orgs.delete",
+        "description": "Deletes the Rev organization.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of Rev organization to delete.",
+                "argument_type": "string",
+                "example": "REV-AbCdEfGh"
+            }
+        ]
+    },
+    {
+        "tool_name": "/rev-orgs.get",
+        "description": "Retrieves the Rev organization's information.",
+        "arguments": [
+            {
+                "argument_name": "account",
+                "argument_description": "The ID of account for which default Rev organization is to be\nfetched.\n",
+                "argument_type": "string",
+                "example": "ACC-12345"
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the required Rev organization.",
+                "argument_type": "string",
+                "example": "REV-AbCdEfGh"
+            }
+        ]
+    },
+    {
+        "tool_name": "/rev-orgs.list",
+        "description": "Gets the list of Rev organizations' information belonging to the\nauthenticated user's Dev Organization which the user is also authorized\nto access.\n",
+        "arguments": [
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters by creator.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "external_ref",
+                "argument_description": "List of external refs to filter Rev organizations for.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of Rev organizations to be retrieved per page.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "sort_by",
+                "argument_description": "Fields to sort the Rev organizations by and the direction to sort\nthem.\n",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/rev-orgs.update",
+        "description": "Updates the Rev organization's information.",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "Description of the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "display_name",
+                "argument_description": "Customer chosen name for the Rev organization.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "domain",
+                "argument_description": "Company's domain name. Example - 'devrev.ai'.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "external_ref",
+                "argument_description": "External ref is a custom unique identifier which is a reference to\nan unique id for this organization's data in some system of\nrecords.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of Rev organization to update.",
+                "argument_type": "string",
+                "example": "REV-AbCdEfGh"
+            },
+            {
+                "argument_name": "tier",
+                "argument_description": "The tier of the RevOrg.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/tags.create",
+        "description": "Creates a new tag, which is used to create associations between objects\nand a logical concept denoted by the tag's name.\n",
+        "arguments": [
+            {
+                "argument_name": "allowed_values",
+                "argument_description": "The allowed values for the tag, or empty if no values are\npermitted.\n",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "description",
+                "argument_description": "The description for the tag.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "The name for the tag, which must be unique across all tags.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/tags.delete",
+        "description": "Deletes a tag.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the tag to delete.",
+                "argument_type": "string",
+                "example": "TAG-12345"
+            }
+        ]
+    },
+    {
+        "tool_name": "/tags.get",
+        "description": "Gets a tag's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The requested tag's ID.",
+                "argument_type": "string",
+                "example": "TAG-12345"
+            }
+        ]
+    },
+    {
+        "tool_name": "/tags.list",
+        "description": "Lists the available tags.",
+        "arguments": [
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of tags to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "Filters for tags with the provided names.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "sort_by",
+                "argument_description": "Fields to sort tags by and the direction to sort them.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/tags.update",
+        "description": "Updates a tag's information.",
+        "arguments": [
+            {
+                "argument_name": "description",
+                "argument_description": "The updated description of the tag.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the tag to update.",
+                "argument_type": "string",
+                "example": "TAG-12345"
+            },
+            {
+                "argument_name": "name",
+                "argument_description": "The updated name of the tag. The name must be unique across all\ntags.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/timeline-entries.create",
+        "description": "Creates a new entry on an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "expires_at",
+                "argument_description": "If set, then the entry is ephemeral and will be deleted after the\nprovided time. The minimum value should be at least a minute more\nthan the current timestamp.\n",
+                "argument_type": "string",
+                "example": "2023-01-01T12:00:00.000Z"
+            },
+            {
+                "argument_name": "object",
+                "argument_description": "The ID of the object to create the timeline entry for.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "private_to",
+                "argument_description": "If the visibility of the entry is private, this specifies the users\nthat the entry is private to. Note the creator is always implicitly\nincluded in this list.\n",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            }
+        ]
+    },
+    {
+        "tool_name": "/timeline-entries.delete",
+        "description": "Deletes an entry from an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the timeline entry to delete.",
+                "argument_type": "string",
+                "example": "don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>"
+            }
+        ]
+    },
+    {
+        "tool_name": "/timeline-entries.get",
+        "description": "Gets an entry on an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the timeline entry to get.",
+                "argument_type": "string",
+                "example": "don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>"
+            }
+        ]
+    },
+    {
+        "tool_name": "/timeline-entries.list",
+        "description": "Lists the timeline entries for an object.",
+        "arguments": [
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of entries to return. If not set, then this\ndefaults to `50`.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "object",
+                "argument_description": "The ID of the object to list timeline entries for.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "visibility",
+                "argument_description": "The visibility of the timeline entries to filter for. Note this is\na strict filter, such that only entries with the exact visibilities\nspecified will be returned.\n",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/timeline-entries.update",
+        "description": "Updates an entry on an object's timeline.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The ID of the timeline entry to update.",
+                "argument_type": "string",
+                "example": "don:core:<partition>:devo/<dev-org-id>:ticket/123:timeline_event/<timeline-event-id>"
+            }
+        ]
+    },
+    {
+        "tool_name": "/webhooks.create",
+        "description": "Creates a new webhook target.",
+        "arguments": [
+            {
+                "argument_name": "event_types",
+                "argument_description": "The event types that the webhook endpoint will receive.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "secret",
+                "argument_description": "The secret to use when verifying webhook events. If provided, the\nsecret must be between 8 and 32 bytes (inclusive). If not set, a\nsecret will be automatically generated and provided in the\nresponse.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "url",
+                "argument_description": "The URL of the webhook endpoint.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/webhooks.delete",
+        "description": "Deletes the requested webhook.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID for the webhook.",
+                "argument_type": "string",
+                "example": "don:integration:<partition>:devo/<dev-org-id>:webhook/<webhook-id>"
+            }
+        ]
+    },
+    {
+        "tool_name": "/webhooks.get",
+        "description": "Gets the requested webhook's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID for the webhook.",
+                "argument_type": "string",
+                "example": "don:integration:<partition>:devo/<dev-org-id>:webhook/<webhook-id>"
+            }
+        ]
+    },
+    {
+        "tool_name": "/webhooks.update",
+        "description": "Updates the requested webhook.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "ID for the webhook.",
+                "argument_type": "string",
+                "example": "don:integration:<partition>:devo/<dev-org-id>:webhook/<webhook-id>"
+            },
+            {
+                "argument_name": "secret",
+                "argument_description": "If provided, updates the secret that's used when verifying webhook\nevents, which must be between 8 and 32 bytes (inclusive). Otherwise\nif empty, then a new secret is generated. If the webhook is active,\nthen its status will transition to the 'unverified' state and it\nwon't receive any object events until successfully verified.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "url",
+                "argument_description": "The webhook's updated URL. If the webhook is active, then the\nwebhook's status will transition to the 'unverified' state and it\nwon't receive any object events until successfully verified.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/works.create",
+        "description": "Creates new work ([issue](https://devrev.ai/docs/product/build),\n[ticket](https://devrev.ai/docs/product/support)) item.\n[task](https://docs.devrev.ai/product/tasks) and opportunity work types\nare supported in the beta version.\n",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "The [part](https://devrev.ai/docs/product/parts) that the work\napplies to. Specifying a part is required when creating tickets and\nissues.\n",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "artifacts",
+                "argument_description": "The IDs of the artifacts to associate with the work item.\n",
+                "argument_type": "array",
+                "example": [
+                    "ARTIFACT-12345"
+                ]
+            },
+            {
+                "argument_name": "body",
+                "argument_description": "Body of the work object.",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "The users that own the work.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "reported_by",
+                "argument_description": "The users that reported the work.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "tags",
+                "argument_description": "Tags associated with the work item.",
+                "argument_type": "array",
+                "example": []
+            },
+            {
+                "argument_name": "target_close_date",
+                "argument_description": "Timestamp for when the work is expected to be complete.",
+                "argument_type": "string",
+                "example": "2023-01-01T12:00:00.000Z"
+            },
+            {
+                "argument_name": "title",
+                "argument_description": "Title of the work object.",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/works.delete",
+        "description": "Deletes a work item.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The work's ID.",
+                "argument_type": "string",
+                "example": "ISS-12345"
+            }
+        ]
+    },
+    {
+        "tool_name": "/works.export",
+        "description": "Exports a collection of work items.",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "Filters for work belonging to any of the provided parts.",
+                "argument_type": "array",
+                "example": [
+                    "PROD-12345"
+                ]
+            },
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for work created by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "first",
+                "argument_description": "The number of work items to return. The default is '50', the\nmaximum is '5000'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for work owned by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "tags",
+                "argument_description": "Filters for work with any of the provided tags.",
+                "argument_type": "array",
+                "example": [
+                    "TAG-12345"
+                ]
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for work of the provided types.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/works.get",
+        "description": "Gets a work item's information.",
+        "arguments": [
+            {
+                "argument_name": "id",
+                "argument_description": "The work's ID.",
+                "argument_type": "string",
+                "example": "ISS-12345"
+            }
+        ]
+    },
+    {
+        "tool_name": "/works.list",
+        "description": "Lists a collection of work items.",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "Filters for work belonging to any of the provided parts.",
+                "argument_type": "array",
+                "example": [
+                    "PROD-12345"
+                ]
+            },
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for work created by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "cursor",
+                "argument_description": "The cursor to resume iteration from. If not provided, then\niteration starts from the beginning.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of works to return. The default is '50'.\n",
+                "argument_type": "integer",
+                "example": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for work owned by any of these users.",
+                "argument_type": "array",
+                "example": [
+                    "DEVU-12345"
+                ]
+            },
+            {
+                "argument_name": "tags",
+                "argument_description": "Filters for work with any of the provided tags.",
+                "argument_type": "array",
+                "example": [
+                    "TAG-12345"
+                ]
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for work of the provided types.",
+                "argument_type": "array",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "/works.update",
+        "description": "Updates a work item's information.",
+        "arguments": [
+            {
+                "argument_name": "applies_to_part",
+                "argument_description": "Updates the part that the work item applies to.",
+                "argument_type": "string",
+                "example": "PROD-12345"
+            },
+            {
+                "argument_name": "body",
+                "argument_description": "Updated body of the work object, or unchanged if not provided.\n",
+                "argument_type": "string",
+                "example": []
+            },
+            {
+                "argument_name": "id",
+                "argument_description": "The work's ID.",
+                "argument_type": "string",
+                "example": "ISS-12345"
+            },
+            {
+                "argument_name": "target_close_date",
+                "argument_description": "Updates the timestamp for when the work is expected to be complete.\n",
+                "argument_type": "string",
+                "example": "2023-01-01T12:00:00.000Z"
+            },
+            {
+                "argument_name": "title",
+                "argument_description": "Updated title of the work object, or unchanged if not provided.\n",
+                "argument_type": "string",
+                "example": []
+            }
+        ]
+    },
+    {
+        "tool_name": "works_list",
+        "description": "Returns a list of work items matching the request",
+        "arguments": [
+            {
+                "argument_name": " applies_to_part",
+                "argument_description": "Filters for work belonging to any of the provided parts",
+                "argument_type": "array of strings",
+                "examples": [
+                    "FEAT-123",
+                    "ENH-123",
+                    "PROD-123",
+                    "CAPL-123"
+                ]
+            },
+            {
+                "argument_name": "created_by",
+                "argument_description": "Filters for work created by any of these users",
+                "argument_type": "array of strings",
+                "examples": [
+                    "DEVU-123"
+                ]
+            },
+            {
+                "argument_name": "issue.priority",
+                "argument_description": "Filters for issues with any of the provided priorities. Allowed values: p0, p1, p2,p3",
+                "argument_type": "array of strings",
+                "examples": []
+            },
+            {
+                "argument_name": "issue.rev_orgs",
+                "argument_description": "Filters for issues with any of the provided Rev organizations",
+                "argument_type": "array of strings",
+                "examples": [
+                    "REV-123"
+                ]
+            },
+            {
+                "argument_name": "limit",
+                "argument_description": "The maximum number of works to return. The default is '50'",
+                "argument_type": "integer (int32)",
+                "examples": []
+            },
+            {
+                "argument_name": "owned_by",
+                "argument_description": "Filters for work owned by any of these users",
+                "argument_type": "array of strings",
+                "examples": [
+                    "DEVU-123"
+                ]
+            },
+            {
+                "argument_name": "stage.name",
+                "argument_description": "Filters for records in the provided stage(s) by name",
+                "argument_type": "array of strings",
+                "examples": []
+            },
+            {
+                "argument_name": "ticket.needs_response",
+                "argument_description": "Filters for tickets that need a response",
+                "argument_type": "boolean",
+                "examples": []
+            },
+            {
+                "argument_name": "ticket.rev_org",
+                "argument_description": "Filters for tickets associated with any of the provided Rev organizations",
+                "argument_type": "array of strings",
+                "examples": [
+                    "REV-123"
+                ]
+            },
+            {
+                "argument_name": "ticket.severity",
+                "argument_description": "Filters for tickets with any of the provided severities. Allowed values:blocker,high, low, medium",
+                "argument_type": "array of strings",
+                "examples": []
+            },
+            {
+                "argument_name": "ticket.source_channel",
+                "argument_description": "Filters for tickets with any of the provided source channels",
+                "argument_type": "array of strings",
+                "examples": []
+            },
+            {
+                "argument_name": "ticket.source_channel",
+                "argument_description": "Filters for tickets with any of the provided source channels",
+                "argument_type": "array of strings",
+                "examples": []
+            },
+            {
+                "argument_name": "type",
+                "argument_description": "Filters for work of the provided types. Allowed values issue, ticket, task",
+                "argument_type": "array of strings",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "summarize_objects",
+        "description": "Summarizes a list of objects. The logic of how to summarize a particular object type is an internal implementation detail.",
+        "arguments": [
+            {
+                "argument_name": "objects",
+                "argument_description": "List of objects to summarize",
+                "argument_type": "array of objects",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "prioritize_objects",
+        "description": "Summarizes a list of objects. The logic of how to summarize a particular object type is an internal implementation detail.",
+        "arguments": [
+            {
+                "argument_name": "objects",
+                "argument_description": "List of objects to summarize",
+                "argument_type": "array of objects",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "add_work_items_to_sprint",
+        "description": "Adds the given work items to the sprint",
+        "arguments": [
+            {
+                "argument_name": "work_ids",
+                "argument_description": "A list of work item IDs to be added to the sprint.",
+                "argument_type": "array of strings",
+                "examples": []
+            },
+            {
+                "argument_name": "sprint_id",
+                "argument_description": "The ID of the sprint to which the work items should be added",
+                "argument_type": "str",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "get_sprint_id",
+        "description": "Returns the ID of the current sprint",
+        "arguments": [
+            {
+                "argument_name": "",
+                "argument_description": "",
+                "argument_type": "",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "get_similar_work_items",
+        "description": "Returns a list of work items that are similar to the given work item",
+        "arguments": [
+            {
+                "argument_name": "work_id",
+                "argument_description": "The ID of the work item for which you want to find similar items",
+                "argument_type": "string",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "search_object_by_name",
+        "description": "Given a search string, returns the id of a matching object in the system of record. If multiple matches are found, it returns the one where the confidence is highest.",
+        "arguments": [
+            {
+                "argument_name": "query",
+                "argument_description": "The search string, could be for example customer\u2019s name, part name, user name.",
+                "argument_type": "string",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "search_object_by_name",
+        "description": "Given a search string, returns the id of a matching object in the system of record. If multiple matches are found, it returns the one where the confidence is highest.",
+        "arguments": [
+            {
+                "argument_name": "query",
+                "argument_description": "The search string, could be for example customer\u2019s name, part name, user name.",
+                "argument_type": "string",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "create_actionable_tasks_from_text",
+        "description": "Given a search string, returns the id of a matching object in the system of record. If multiple matches are found, it returns the one where the confidence is highest.",
+        "arguments": [
+            {
+                "argument_name": "text",
+                "argument_description": "The text from which the actionable insights need to be created.",
+                "argument_type": "string",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "create_actionable_tasks_from_text",
+        "description": "Given a search string, returns the id of a matching object in the system of record. If multiple matches are found, it returns the one where the confidence is highest.",
+        "arguments": [
+            {
+                "argument_name": "text",
+                "argument_description": "The text from which the actionable insights need to be created.",
+                "argument_type": "string",
+                "examples": []
+            }
+        ]
+    },
+    {
+        "tool_name": "who_am_i",
+        "description": "Returns the ID of the current user",
+        "arguments": [
+            {
+                "argument_name": "",
+                "argument_description": "",
+                "argument_type": "",
+                "examples": []
+            }
+        ]
+    }
+]

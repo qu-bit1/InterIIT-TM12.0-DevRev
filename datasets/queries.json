@@ -1,0 +1,22 @@
+[
+  "Add work items 'AB12-XYZ' and 'DEF-456' to sprint 'Sprint123' and retrieve the ID of the current sprint.",
+  "Search for work items similar to 'WK-789' and add them to the current sprint, then summarize the list of added work items.",
+  "Search for 'Item123', prioritize similar items, and retrieve the ID of the current sprint.",
+  "Search for 'Object456', add its ID to 'Sprint789', and find object ID for 'UserXYZ'.",
+  "Retrieve work items owned by 'DEVU-123' in 'FEAT-123' and 'PROD-123'. Get similar work items for 'ENH-123'.",
+  "Search for 'CAPL-123' and 'PROD-123' by name. Prioritize work items needing a response.",
+  "Filter work items in 'REV-123' with severity 'high' and 'medium'. Retrieve work items owned by 'DEVU-123'.",
+  "Retrieve work items created by 'DEVU-123' in 'FEAT-123' and 'PROD-123'. Create actionable tasks from text.",
+  "Find work items related to 'REV-123'. Get similar work items for 'ENH-123'. Summarize a list of objects.",
+  "Search for 'CAPL-123' and 'ENH-123'. Retrieve the current user's ID.",
+  "Retrieve a list of all work items associated with the feature 'FEATURE-001'.",
+  "Find work items in 'CAPL-123' owned by 'DEVU-123'. Get the current sprint ID.",
+  "Filter work items in 'REV-123' with priority 'p0', 'p1', and 'p2'. Retrieve work items owned by 'DEVU-123'.",
+  "Find work items in 'CAPL-123' and 'ENH-123'. Create actionable tasks from text.",
+  "Add work items 'WK-789A' and 'WK-234B' to sprint 'SPR-123X', and then retrieve the ID of the current sprint.",
+  "Find work items similar to 'WK-456C', add them to the current sprint, and then summarize the list of added work items.",
+  "Perform a search for an object with the name 'ProjectXYZ'.",
+  "Search for work item 'Item_XYZ', prioritize similar items, and retrieve the ID of the current sprint.",
+  "Search for object 'Object_ABC', add its ID to sprint 'SPR-890Y', and find object ID for user 'User123'.",
+  "Add a new task with ID 'NEW-001' to the sprint named 'Sprint456'."
+]

@@ -1,0 +1,7 @@
+litellm
+langchain 
+openai 
+tiktoken 
+faiss-cpu
+pandas
+stanza
